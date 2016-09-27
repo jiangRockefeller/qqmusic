@@ -1,17 +1,17 @@
 # qqmusic
-
+>项目结构
 qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 &emsp;&emsp;&emsp;&ensp;/document/BUCQQMusic&emsp;--- 需求分析 <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/MethodTmp&emsp;&emsp;--- 接口?   
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析 
 
-
+<hr/>
 >一些有用link
 
 <ul>
-<li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa"> <em>小伙伴翻译的官方guide</em></a></li>
+<li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="_blank"> <em>小伙伴翻译的官方guide</em></a></li>
 <li>
-<p><a href="http://blog.csdn.net/u013240609/article/details/17483881"><em>MyEclipse安装配置和使用egit与github代码托管（呕心沥血之作）</em></a></p>
+<p><a href="http://blog.csdn.net/u013240609/article/details/17483881" target="_blank" ><em>MyEclipse安装配置和使用egit与github代码托管（呕心沥血之作）</em></a></p>
 </li>
 </ul>
 
@@ -34,8 +34,8 @@ merge到的master就是我们想要的最新版本
 <hr/>
 README.md是markdown格式的文档,markdown是简化版的html,兼容html
 <ul>
-<li><a href="http://daringfireball.net/projects/markdown/syntax"> <em>创始人 John Gruber 的 Markdown 语法说明</em></a></li>
+<li><a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" > <em>创始人 John Gruber 的 Markdown 语法说明</em></a></li>
 <li>
-<p><a href="http://wowubuntu.com/markdown/#list"><em>Markdown 中文版语法说明</em></a></p>
+<p><a href="http://wowubuntu.com/markdown/#list" target="_blank" ><em>Markdown 中文版语法说明</em></a></p>
 </li>
 </ul>
