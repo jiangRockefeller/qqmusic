@@ -9,9 +9,9 @@ qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 >一些有用link
 
 <ul>
-<li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="_blank"> <em>小伙伴翻译的官方guide</em></a></li>
+<li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="_blank">小伙伴翻译的官方guide</a></li>
 <li>
-<p><a href="http://blog.csdn.net/u013240609/article/details/17483881" target="_blank" ><em>MyEclipse安装配置和使用egit与github代码托管（呕心沥血之作）</em></a></p>
+<p><a href="http://blog.csdn.net/u013240609/article/details/17483881" target="_blank" >MyEclipse安装配置和使用egit与github代码托管</a></p>
 </li>
 </ul>
 
