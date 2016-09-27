@@ -7,7 +7,7 @@ qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析 
 
 <hr/>
->一些有用link
+>一些有用link,右键新标签页打开
 
 <ul>
 <li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="_blank">小伙伴翻译的github官方guide</a></li>
