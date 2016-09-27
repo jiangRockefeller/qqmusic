@@ -36,11 +36,4 @@ merge到的master就是我们想要的最新版本
 * [创始人 John Gruber 的 Markdown 语法说明](http://daringfireball.net/projects/markdown/syntax)
 * [Markdown 中文版语法说明](http://wowubuntu.com/markdown/#list)
 
-//js
-<scrip>
-  var aTagArr = [].slice.apply(document.getElementsByTagName("a"));
 
-aTagArr.forEach(function (e, i) {
-  e.href.indexOf("_blank") > -1 ? e.target = "_blank" : null;
-});
-</scrip>
