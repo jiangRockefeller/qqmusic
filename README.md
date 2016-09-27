@@ -6,6 +6,17 @@ qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析 
 
 <a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="blank">小伙伴翻译的官方guide</a><br/>
+
+
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/syntax"> <em>创始人 John Gruber 的 Markdown 语法说明</em></a></li>
+<li>
+<p><a href="http://wowubuntu.com/markdown/#list"><em>Markdown 中文版语法说明</em></a></p>
+</li>
+</ul>
+
+
 右上角的fork按钮 是把项目复制到你的帐号里
 
 然后你可以修改项目里的东西  修改完点 commit可以保存修改
