@@ -10,7 +10,7 @@ qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 >一些有用link,右键新标签页打开
 
 <ul>
-<li><a href="http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa" target="_blank">小伙伴翻译的github官方guide</a></li>
+<li>[小伙伴翻译的github官方guide](http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa)</li>
 <li>
 <p><a href="http://blog.csdn.net/u013240609/article/details/17483881" target="_blank" >MyEclipse安装配置和使用egit与github代码托管</a></p>
 </li>
@@ -40,3 +40,11 @@ README.md是markdown格式的文档,markdown是简化版的html,兼容html
 <p><a href="http://wowubuntu.com/markdown/#list" target="_blank" ><em>Markdown 中文版语法说明</em></a></p>
 </li>
 </ul>
+//js
+<scrip>
+  var aTagArr = [].slice.apply(document.getElementsByTagName("a"));
+
+aTagArr.forEach(function (e, i) {
+  e.href.indexOf("_blank") > -1 ? e.target = "_blank" : null;
+});
+</scrip>
