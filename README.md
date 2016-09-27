@@ -1,11 +1,11 @@
 # qqmusic
 
-qqmusic/qqmusic.sql           --- 数据库脚本
-       /document/BUC_QQMusic  --- 需求分析 
-                /methods_Tmp  --- 接口?   
-                /用例属性分析 
+qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
+&emsp;&emsp;&emsp;&ensp;/document/BUCQQMusic&emsp;--- 需求分析 <br>
+&emsp;&emsp;&emsp;&ensp;/MethodTmp&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--- 接口?   
+&emsp;&emsp;&emsp;&ensp;/用例属性分析 
 
-<---------------------------------------------------------------------->
+
 右上角的fork按钮 是把项目复制到你的帐号里
 
 然后你可以修改项目里的东西  修改完点 commit可以保存修改
