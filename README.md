@@ -1,6 +1,6 @@
 # qqmusic
 >项目结构
-
+  
 qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 &emsp;&emsp;&emsp;&ensp;/document/BUCQQMusic&emsp;--- 需求分析 <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/MethodTmp&emsp;&emsp;--- 接口?   
@@ -9,7 +9,7 @@ qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 <hr/>
 >一些有用link,右键新标签页打开
 
-[小伙伴翻译的github官方guide](http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa)
+* [小伙伴翻译的github官方guide](http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa)
 <ul>
 <li>[小伙伴翻译的github官方guide](http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa)</li>
 <li>
