@@ -4,7 +4,7 @@
 qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
 &emsp;&emsp;&emsp;&ensp;/document/BUCQQMusic&emsp;--- 需求分析 <br>
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/MethodTmp&emsp;&emsp;--- 接口?   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析 
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析&emsp;&emsp;--- 词汇表
 
 <hr/>
 >一些有用link,右键新标签页打开
