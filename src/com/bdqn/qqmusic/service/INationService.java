@@ -5,6 +5,6 @@ import java.util.List;
 import com.bdqn.qqmusic.pojo.Artist;
 
 public interface INationService {
-	//以国际ID查找歌手
+	//浠ュ浗绫岻D鏌ユ壘姝屾墜
 	public List<Artist> findByNID(Integer nid);
 }
