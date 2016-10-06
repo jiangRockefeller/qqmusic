@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : mysql1
 Source Server Version : 50626
 Source Host           : localhost:3306
-Source Database       : qqtest
+Source Database       : qqmusic
 
 Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2016-09-29 09:21:04
+Date: 2016-10-06 12:03:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -55,8 +55,8 @@ INSERT INTO `artist` VALUES ('10', '刀郎', null, '中国', '四川', '歌手',
 INSERT INTO `artist` VALUES ('11', '张惠妹', null, '中国台湾', '台湾', '	歌手', '158cm', '41kg', 'O型', '第一位首张专辑发片在台湾销售超过百万张的歌手.', '养狗', null, '1', null);
 INSERT INTO `artist` VALUES ('12', '周杰伦', '私立淡江中学音乐科', '中国台湾', '台北', '歌手', '175cm', '71kg', '	O型', '亚洲影响力最受欢迎全能华语艺人', '双截棍、篮球', null, '1', null);
 INSERT INTO `artist` VALUES ('13', '	作家、作曲家', '	中京大学', '日本', '东京', '歌手，作家、作曲家', '173cm', '68kg', 'B型', '日本著名作曲家', '作曲', null, '1', null);
-INSERT INTO `artist` VALUES ('14', '权志龙 ', '庆熙大学后现代音乐系', '韩国', '首尔', '歌手，作家', '178cm', '60kg', 'A型', '08年韩国十大作曲家', '作曲、作词\r\n作曲、作词\r\n作曲、作词', null, '1', null);
-INSERT INTO `artist` VALUES ('15', '贾斯汀·比伯 ', null, '加拿大', '斯特拉特福', '歌手，演员', '172cm', '55kg', 'B型', '第40届AMA全美音乐奖最佳艺人奖', '养狗', null, '1', null);
+INSERT INTO `artist` VALUES ('14', '权志龙 ', '庆熙大学后现代音乐系', '韩国', '首尔', '歌手，作家', '178cm', '60kg', 'A型', '08年韩国十大作曲家', '作曲、作词\r\n作曲、作词\r\n作曲、作词', null, '5', null);
+INSERT INTO `artist` VALUES ('15', '贾斯汀·比伯 ', null, '加拿大', '斯特拉特福', '歌手，演员', '172cm', '55kg', 'B型', '第40届AMA全美音乐奖最佳艺人奖', '养狗', null, '3', null);
 
 -- ----------------------------
 -- Table structure for `company`
@@ -131,16 +131,19 @@ INSERT INTO `language` VALUES ('3', '韩语');
 -- ----------------------------
 DROP TABLE IF EXISTS `nation`;
 CREATE TABLE `nation` (
-  `nid` int(11) NOT NULL,
+  `nid` int(11) NOT NULL AUTO_INCREMENT,
   `nnation` varchar(255) NOT NULL COMMENT '国籍',
   `nclass` varchar(255) DEFAULT NULL COMMENT '分类(华语,欧美,日本,韩国)',
   PRIMARY KEY (`nid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of nation
 -- ----------------------------
 INSERT INTO `nation` VALUES ('1', '中国', '华语');
+INSERT INTO `nation` VALUES ('3', '欧美', '英语');
+INSERT INTO `nation` VALUES ('4', '日本', '日语');
+INSERT INTO `nation` VALUES ('5', '韩国', '韩语');
 
 -- ----------------------------
 -- Table structure for `record`
@@ -149,7 +152,8 @@ DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record` (
   `rid` int(11) NOT NULL,
   `rname` varchar(255) NOT NULL,
-  `rdate` datetime(6) DEFAULT NULL,
+  `rmainartist` varchar(255) NOT NULL COMMENT '主要艺人',
+  `rdate` date DEFAULT NULL,
   `rcid` int(11) DEFAULT NULL COMMENT 'company',
   `rlid` int(11) DEFAULT NULL COMMENT 'language',
   `rtid` int(11) DEFAULT NULL COMMENT 'type',
@@ -169,21 +173,21 @@ CREATE TABLE `record` (
 -- ----------------------------
 -- Records of record
 -- ----------------------------
-INSERT INTO `record` VALUES ('1', '陪你度过漫长岁月', '2016-09-15 00:00:00.000000', '1', '1', '1', null, '1');
-INSERT INTO `record` VALUES ('2', '一切随风', '2003-07-01 00:00:00.000000', '2', '2', '2', null, '1');
-INSERT INTO `record` VALUES ('3', '男人悲剧', '2016-08-01 00:00:00.000000', '2', '2', '1', null, '2');
-INSERT INTO `record` VALUES ('4', '曾经', '2011-09-20 00:00:00.000000', '3', '1', '1', null, '1');
-INSERT INTO `record` VALUES ('5', '笑一笑', '2016-09-12 00:00:00.000000', '4', '1', '1', null, '2');
-INSERT INTO `record` VALUES ('6', '不同班同学', '2016-09-13 00:00:00.000000', '5', '2', '1', null, '1');
-INSERT INTO `record` VALUES ('7', '来日方长', '2016-09-12 00:00:00.000000', '6', '1', '1', null, '2');
-INSERT INTO `record` VALUES ('8', '出发', '2008-05-12 00:00:00.000000', '7', '1', '2', null, '1');
-INSERT INTO `record` VALUES ('9', '相爱恨早', '2016-07-10 00:00:00.000000', '8', '1', '1', null, '1');
-INSERT INTO `record` VALUES ('10', '去伊犁的路上', '2013-11-01 00:00:00.000000', '9', '1', '1', null, '1');
-INSERT INTO `record` VALUES ('11', '阿密特2', '2015-04-04 00:00:00.000000', '2', '1', '2', null, '1');
-INSERT INTO `record` VALUES ('12', '周杰伦的床边故事', '2016-06-24 00:00:00.000000', '10', '1', '1', null, '1');
-INSERT INTO `record` VALUES ('13', '', null, null, null, '1', null, '1');
-INSERT INTO `record` VALUES ('14', 'Japan Album :Coup D\'etat+one of A Kind&Heartbreaker', '2013-11-27 00:00:00.000000', '11', '3', '2', null, '3');
-INSERT INTO `record` VALUES ('15', 'Cold Water', '2016-09-09 00:00:00.000000', '12', '4', '3', null, '4');
+INSERT INTO `record` VALUES ('1', '陪你度过漫长岁月', '长者', '2016-09-15', '1', '1', '1', null, '1');
+INSERT INTO `record` VALUES ('2', '一切随风', '钟镇涛', '2003-07-01', '2', '2', '2', null, '1');
+INSERT INTO `record` VALUES ('3', '男人悲剧', '绿林好汉', '2016-08-01', '2', '2', '1', null, '2');
+INSERT INTO `record` VALUES ('4', '曾经', '沧海难为水', '2011-09-20', '3', '1', '1', null, '1');
+INSERT INTO `record` VALUES ('5', '笑一笑', '李严肃', '2016-09-12', '4', '1', '1', null, '2');
+INSERT INTO `record` VALUES ('6', '不同班同学', '孙浩鹏', '2016-09-13', '5', '2', '1', null, '1');
+INSERT INTO `record` VALUES ('7', '来日方长', '方长', '2016-09-12', '6', '1', '1', null, '2');
+INSERT INTO `record` VALUES ('8', '出发', '周润发', '2008-05-12', '7', '1', '2', null, '1');
+INSERT INTO `record` VALUES ('9', '相爱恨早', '林妙可', '2016-07-10', '8', '1', '1', null, '1');
+INSERT INTO `record` VALUES ('10', '去伊犁的路上', '胡锦涛', '2013-11-01', '9', '1', '1', null, '1');
+INSERT INTO `record` VALUES ('11', '阿密特2', '阿凡达', '2015-04-04', '2', '1', '2', null, '1');
+INSERT INTO `record` VALUES ('12', '周杰伦的床边故事', '侯佩岑', '2016-06-24', '10', '1', '1', null, '1');
+INSERT INTO `record` VALUES ('14', 'Japan Album :Coup D\'etat+one of A Kind&Heartbreaker', 'Kishi Aino', '2013-11-27', '11', '3', '2', null, '3');
+INSERT INTO `record` VALUES ('15', 'Cold Water', 'Hot Shower', '2016-09-09', '12', '4', '3', null, '4');
+INSERT INTO `record` VALUES ('16', 'Dig Out Your Soul', 'Oasis', '2008-10-06', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `song`
