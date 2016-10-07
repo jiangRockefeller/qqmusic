@@ -1,8 +1,10 @@
 package com.bdqn.qqmusic.pojo;
 
 import com.bdqn.qqmusic.dao.BaseDAO;
+
 import java.util.List;
 import java.util.Set;
+
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
@@ -20,7 +22,6 @@ import org.slf4j.LoggerFactory;
  * @see com.bdqn.qqmusic.pojo.Song
  * @author MyEclipse Persistence Tools
  */
-
 public class SongDAO extends BaseDAO {
 	private static final Logger log = LoggerFactory.getLogger(SongDAO.class);
 	// property constants
@@ -81,16 +82,52 @@ public class SongDAO extends BaseDAO {
 		log.debug("finding Song instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			String queryString = "from Song as model where model."
+			Query queryObject=null;
+			/*if(propertyName.equals("aname")){
+				//在HQL语句中定义命名参数要用”:”开头
+				String queryString = "from Song as s where s.artist.aname=:aname";
+				System.out.println(queryString);
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setProperties(value);
+				//System.out.println(queryString);
+			}else if(propertyName.equals("rname")){
+				String queryString = "from Song as s where s.record.rname=:rname";
+				System.out.println(queryString);
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setProperties(value);
+			}else{*/
+				String queryString = "from Song as model where model."
 					+ propertyName + "= ?";
-			Query queryObject = getSession().createQuery(queryString);
-			queryObject.setParameter(0, value);
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setParameter(0, value);
+				//System.out.println(queryString);
+//			}
+			//Query a = queryObject;	
+			List<Song> list=queryObject.list();
+			//输出查询语句
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
 			throw re;
 		}
 	}
+	public List findByPropertyAndPage(String propertyName, Object value, int pageNum, int line){
+		try {
+			Query queryObject=null;
+			String queryString = "from Song as model where model."
+					+ propertyName + "= ?";
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setParameter(0, value);
+				queryObject.setFirstResult((pageNum-1)*line);
+				queryObject.setMaxResults(line);
+				List<Song> list=queryObject.list();
+				return queryObject.list();
+		}catch(RuntimeException re){
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+	
 
 	public List findBySname(Object sname) {
 		return findByProperty(SNAME, sname);
@@ -109,6 +146,20 @@ public class SongDAO extends BaseDAO {
 		try {
 			String queryString = "from Song";
 			Query queryObject = getSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+	public List findAll(int pageNum, int line) {
+		log.debug("finding all Song instances");
+		try {
+			String queryString = "from Song";
+			Query queryObject = getSession().createQuery(queryString);
+			queryObject.setFirstResult((pageNum-1)*line);
+			queryObject.setMaxResults(line);
+			List<Song> list=queryObject.list();
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
