@@ -12,7 +12,7 @@ import com.bdqn.qqmusic.pojo.Song;
 import com.bdqn.qqmusic.pojo.SongDAO;
 import com.bdqn.qqmusic.factory.HibernateSessionFactory;
 
-public class SongServiceImpl implements ISongService {
+public class SongService implements ISongService {
 	
 	//这是就是要调用SongDAO的，所以最开始创建一个SongDAO对象
 	SongDAO songDAO = new SongDAO();
