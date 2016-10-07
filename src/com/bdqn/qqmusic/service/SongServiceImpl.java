@@ -1,4 +1,4 @@
-package com.bdqn.qqmusic.service.Impl;
+package com.bdqn.qqmusic.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,11 @@ import com.bdqn.qqmusic.pojo.Artist;
 import com.bdqn.qqmusic.pojo.Record;
 import com.bdqn.qqmusic.pojo.Song;
 import com.bdqn.qqmusic.pojo.SongDAO;
-import com.bdqn.qqmusic.service.SongService;
-import com.bdqn.qqmusic.util.HibernateSessionFactory;
+import com.bdqn.qqmusic.factory.HibernateSessionFactory;
 
-public class SongServiceImpl implements SongService {
+public class SongServiceImpl implements ISongService {
 	
-	//这是就是要调用SongDAO的，所以最开始创建一个SongDAO对象
+	//杩欐槸灏辨槸瑕佽皟鐢⊿ongDAO鐨勶紝鎵�浠ユ渶寮�濮嬪垱寤轰竴涓猄ongDAO瀵硅薄
 	SongDAO songDAO = new SongDAO();
 	List<Song> list = new ArrayList<Song>();
 	Song song = new Song(); 
@@ -67,7 +66,7 @@ public class SongServiceImpl implements SongService {
 		return list;
 	}
 	
-	//分页
+	//锟斤拷页
 	@Override
 	public List<Song> getAllSongsByPageNum(int pageNum, int line) {
 		try{

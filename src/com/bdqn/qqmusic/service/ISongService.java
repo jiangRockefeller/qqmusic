@@ -6,17 +6,17 @@ import com.bdqn.qqmusic.pojo.Artist;
 import com.bdqn.qqmusic.pojo.Record;
 import com.bdqn.qqmusic.pojo.Song;
 
-public interface SongService {
+public interface ISongService {
 
 	//Song song = null;
 	
-	//Í¨¹ıÌõ¼ş²éÕÒsong¶ÔÏó
+	//Í¨é€šè¿‡æ¡ä»¶æŸ¥æ‰¾songå¯¹è±¡
     List<Song> getSongByName(Object name);
     Song getSongById(int id);
     List<Song> getAllSongs();
 
-    //ÏÂÃæÊÇ·ÖÒ³
-    //pageNum µ±Ç°ËùÔÚÒ³;  line Ò»Ò³ÓĞ¶àÉÙĞĞSongs
+    //ä¸‹é¢æ˜¯åˆ†é¡µ
+    //pageNum å½“å‰æ‰€åœ¨é¡µ;  line ä¸€é¡µæœ‰å¤šå°‘è¡ŒSongs
     List<Song> getAllSongsByPageNum(int pageNum, int line);
     List<Song> getSongsByRecord(Record record);
     List<Song> getSongsByRecordPageNum(Record record, int pageNum);
@@ -24,7 +24,7 @@ public interface SongService {
     List<Song> getSongsByArtist(Artist artist);
     List<Song> getSongsByArtistPageNum(Artist artist, int pageNum);
 
-    //ÔöÉ¾¸Ä
+    //å¢åˆ æ”¹
     void addSong(Song song);
     void deleteSong(Song Song);
     void editSong(Song song);

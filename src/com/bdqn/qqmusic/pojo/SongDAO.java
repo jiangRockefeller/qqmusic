@@ -84,7 +84,7 @@ public class SongDAO extends BaseDAO {
 		try {
 			Query queryObject=null;
 			/*if(propertyName.equals("aname")){
-				//ÔÚHQLÓï¾äÖĞ¶¨ÒåÃüÃû²ÎÊıÒªÓÃ¡±:¡±¿ªÍ·
+				//åœ¨HQLè¯­å¥ä¸­å®šä¹‰å‘½åå‚æ•°è¦ç”¨â€:â€å¼€å¤´
 				String queryString = "from Song as s where s.artist.aname=:aname";
 				System.out.println(queryString);
 				queryObject = getSession().createQuery(queryString);
@@ -104,7 +104,7 @@ public class SongDAO extends BaseDAO {
 //			}
 			//Query a = queryObject;	
 			List<Song> list=queryObject.list();
-			//Êä³ö²éÑ¯Óï¾ä
+			//è¾“å‡ºæŸ¥è¯¢è¯­å¥
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
