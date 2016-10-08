@@ -66,7 +66,7 @@ public class SongService implements ISongService {
 		return list;
 	}
 	
-	//��ҳ
+	//分页
 	@Override
 	public List<Song> getAllSongsByPageNum(int pageNum, int line) {
 		try{
