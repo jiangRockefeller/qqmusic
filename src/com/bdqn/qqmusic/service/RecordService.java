@@ -1,38 +1,42 @@
 package com.bdqn.qqmusic.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
-import com.bdqn.qqmusic.factory.HibernateSessionFactory;
+import com.bdqn.qqmusic.pojo.Company;
+import com.bdqn.qqmusic.pojo.Genre;
+import com.bdqn.qqmusic.pojo.Language;
 import com.bdqn.qqmusic.pojo.Record;
-import com.bdqn.qqmusic.pojo.RecordDAO;
+import com.bdqn.qqmusic.pojo.Type;
 
-
-
-
-public class RecordService implements IRecordService {
-	RecordDAO dao=new RecordDAO(); 
-	List<Record> list=new ArrayList<Record>();
-	@Override
-	public List<Record> getAllRecord() {
-		// TODO Auto-generated method stub
-		Session session=HibernateSessionFactory.getSession();
-		Transaction tx=session.beginTransaction();
-		try {
-			list=dao.findAll();
-			tx.commit();
-		} catch (RuntimeException e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			tx.rollback();
-		}finally{
-			session.close();
-		}
-		
-		return list;
-	}
+public interface RecordService {
+	//根据名字得到专辑
+	public Record getRecordByName(String name);
+	//根据id得到专辑
+	public Record getRecordById(int id);
+	 
+	public List<Record> getAllRecords();
+	
+	//pageNum 当前所在页;  line 一页有多少行Records
+	public List<Record> getAllRecordsByPageNum(int pageNum, int line);
+	
+	public List<Record> getRecordsByGenre(Genre genre);
+	
+	public List<Record> getRecordsByGenrePageNum(Genre genre, int pageNum, int line);
+	
+	public List<Record> getRecordsByCompany(Company company);
+	
+	public List<Record> getRecordsByCompanyPageNum(Company company, int pageNum, int line);
+	
+	public List<Record> getRecordsByLanguage(Language language);
+	
+	public List<Record> getRecotdsByLanguagePageNum(Language language, int pageNum, int line);
+	
+	public List<Record> getRecordsByType(Type type);
+	
+	public List<Record> getRecordByTypePageNum(Type type, int pageNum, int line);
+	
+	public void saveOrUpdateRecord(Record record);
+	
+	public void deleteRecord(Record record);
 
 }
