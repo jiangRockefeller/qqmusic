@@ -12,11 +12,11 @@ import com.bdqn.qqmusic.dao.BaseDAO;
 import com.bdqn.qqmusic.factory.HibernateSessionFactory;
 import com.bdqn.qqmusic.pojo.Record;
 import com.bdqn.qqmusic.pojo.RecordDAO;
-import com.bdqn.qqmusic.service.IRecordServiceImpl;
+import com.bdqn.qqmusic.service.RecordService;
 
 public class Test {
 	public static void main(String[] args) {
-		 IRecordServiceImpl test=new IRecordServiceImpl();
+		 RecordService test=new RecordService();
 
 		 List<Record> list=null;
 		 

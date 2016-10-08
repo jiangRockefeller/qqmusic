@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bdqn.qqmusic.pojo.Record;
-import com.bdqn.qqmusic.service.IRecordServiceImpl;
+import com.bdqn.qqmusic.service.RecordService;
 
 public class AlbumServlet extends HttpServlet {
 
@@ -34,7 +34,7 @@ public class AlbumServlet extends HttpServlet {
 		
 	
 		
-		IRecordServiceImpl recordService=new IRecordServiceImpl();
+		RecordService recordService=new RecordService();
 		List<Record> mod_playlist=new ArrayList<Record>();
 		mod_playlist=recordService.getAllRecord();
 		System.out.println("hah");
