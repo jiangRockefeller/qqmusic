@@ -1,7 +1,7 @@
 # qqmusic
 > notice
 
-> 服务层的命名逻辑由:
+ 服务层的命名逻辑由:
 
 接口
 
@@ -15,7 +15,7 @@ com.bdqn.qqmusic.service.ObjectService.java
 ```
 com.bdqn.qqmusic.service.impl.ObjectServiceImpl.java
 ```
-> 改成
+ 改成
 
 接口
 
