@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Thu Sep 29 23:36:56 CST 2016
+#Sun Oct 09 20:27:11 CST 2016
 sessionFactoryName=com.bdqn.qqmusic.pojo.HibernateSessionFactory
 genBasicCompId=false
 profile=
