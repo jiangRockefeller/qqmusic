@@ -1,37 +1,44 @@
 # qqmusic
->项目结构
-  
-qqmusic/qqmusic.sql &emsp; &emsp;&emsp;&emsp;&emsp;--- 数据库脚本<br>
-&emsp;&emsp;&emsp;&ensp;/document/BUCQQMusic&emsp;--- 需求分析 <br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/MethodTmp&emsp;&emsp;--- 接口?   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;/用例属性分析&emsp;&emsp;--- 词汇表
+> notice
 
-<hr/>
->一些有用link,右键新标签页打开
+ 服务层的命名逻辑由:
 
-* [小伙伴翻译的github官方guide](http://note.youdao.com/noteshare?id=f9d4c6d21f7f124f61fe7d9c2db3fcaa)
-* [MyEclipse安装配置和使用egit与github代码托管](http://blog.csdn.net/u013240609/article/details/17483881)
+接口
+
+```
+com.bdqn.qqmusic.service.ObjectService.java
+```
 
 
+实现类
 
-右上角的fork按钮 是把项目复制到你的帐号里
+```
+com.bdqn.qqmusic.service.impl.ObjectServiceImpl.java
+```
+ 改成
 
-然后你可以修改项目里的东西  修改完点 commit可以保存修改
+接口
 
-pull request 就是申请合并到原来的项目里
+```
+com.bdqn.qqmusic.service.IObjectService.java
+```
+实现类
 
-主版本叫master
+```
+com.bdqn.qqmusic.service.ObjectService.java
+```
+不再分包impl包,都放在一起
 
-branch就是分支 就是说不同版本 一个项目比如我们做的新闻
+> log
 
-可能最开始你只用jsp做 这是一个版本 后来改成用servlet 可以开一个新的branch
+- **30SEP**完成只有专辑筛选页的demo
+- **07OCT**增加了SongDAO，SongService 
+- **08OCT**添加了record表,company表,genre表,language表,song表,type表的service层,有部分接口的方法未完全实现
 
-然后经过一些讨论啊 检查啊 什么鬼的 就可以合并 就是merge
 
-merge到的master就是我们想要的最新版本
-<hr/>
->README.md是markdown格式的文档,markdown是简化版的html,兼容html
+> link
 
+* [git常用命令,参考连接](http://note.youdao.com/noteshare?id=111d5965973fa168dd97c1e09fdc7ec4)
 * [markdown 简明语法--1分钟学会Markdown语法](http://lutaf.com/markdown-simple-usage.htm)
 * [创始人 John Gruber 的 Markdown 语法说明](http://daringfireball.net/projects/markdown/syntax)
 * [Markdown 中文版语法说明](http://wowubuntu.com/markdown/#list)
