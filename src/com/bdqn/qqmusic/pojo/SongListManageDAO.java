@@ -29,7 +29,9 @@ public class SongListManageDAO extends BaseDAO {
 	public static final String SMNAME = "smname";
 	public static final String SMCALLCOUNT = "smcallcount";
 	public static final String SMCOVERPATH = "smcoverpath";
-
+	
+/*------------------------------------------------------------------------*/
+	
 	public void save(SongListManage transientInstance) {
 		log.debug("saving SongListManage instance");
 		try {
