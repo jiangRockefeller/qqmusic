@@ -31,10 +31,10 @@ com.bdqn.qqmusic.service.ObjectService.java
 
 > log
 
-- **30SEP**完成只有专辑筛选页的demo
-- **07OCT**增加了SongDAO，SongService 
-- **08OCT**添加了record表,company表,genre表,language表,song表,type表的service层,有部分接口的方法未完全实现
-
+- **30SEP:**完成只有专辑筛选页的demo
+- **07OCT:**增加了SongDAO，SongService 
+- **08OCT:**添加了record表,company表,genre表,language表,song表,type表的service层,有部分接口的方法未完全实现
+- **09OCT:**修改了src/com/bdqn/qqmusic/service/RecordService.java
 
 > link
 
