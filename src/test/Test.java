@@ -5,6 +5,7 @@ import java.util.List;
 import com.bdqn.qqmusic.pojo.Record;
 import com.bdqn.qqmusic.service.RecordService;
 //test
+//this is my test
 public class Test {
 	public static void main(String[] args) {
 		 RecordService test=new RecordService();
