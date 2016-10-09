@@ -1,8 +1,5 @@
 package com.bdqn.qqmusic.pojo;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Company entity. @author MyEclipse Persistence Tools
  */
@@ -13,7 +10,6 @@ public class Company implements java.io.Serializable {
 
 	private Integer cid;
 	private String ccompany;
-	private Set records = new HashSet(0);
 
 	// Constructors
 
@@ -22,9 +18,8 @@ public class Company implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Company(String ccompany, Set records) {
+	public Company(String ccompany) {
 		this.ccompany = ccompany;
-		this.records = records;
 	}
 
 	// Property accessors
@@ -43,14 +38,6 @@ public class Company implements java.io.Serializable {
 
 	public void setCcompany(String ccompany) {
 		this.ccompany = ccompany;
-	}
-
-	public Set getRecords() {
-		return this.records;
-	}
-
-	public void setRecords(Set records) {
-		this.records = records;
 	}
 
 }
