@@ -1,6 +1,6 @@
 package com.bdqn.qqmusic.pojo;
 
-import java.util.HashSet;		
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -14,6 +14,7 @@ public class Company implements java.io.Serializable {
 	private Integer cid;
 	private String ccompany;
 	private Set records = new HashSet(0);
+
 	// Constructors
 
 	/** default constructor */
@@ -43,11 +44,12 @@ public class Company implements java.io.Serializable {
 	public void setCcompany(String ccompany) {
 		this.ccompany = ccompany;
 	}
-	public Set getRecords() {		
-				return this.records;		
-			}		
-				
-			public void setRecords(Set records) {		
-				this.records = records;		
-			}
+
+	public Set getRecords() {
+		return this.records;
+	}
+
+	public void setRecords(Set records) {
+		this.records = records;
+	}
 }

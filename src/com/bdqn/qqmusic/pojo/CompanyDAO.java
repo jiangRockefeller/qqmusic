@@ -37,22 +37,21 @@ public class CompanyDAO extends BaseDAO {
 		}
 	}
 
-	//以下更新方法为自己编写{		
-				
-		 public void update(Company transientInstances){		
-			 log.debug("updating Company instance");		
-			 try{		
-				 getSession().update(transientInstances);		
-				 log.debug("update successful");		
-			 }catch(RuntimeException re){		
-				 log.error("update failed", re);		
-			     throw re;		
-			 }		
-			 		
-		 }		
-				
-				
-		//}
+	// 以下更新方法为自己编写{
+
+	public void update(Company transientInstances) {
+		log.debug("updating Company instance");
+		try {
+			getSession().update(transientInstances);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
+			throw re;
+		}
+
+	}
+
+	// }
 	public void delete(Company persistentInstance) {
 		log.debug("deleting Company instance");
 		try {
@@ -64,31 +63,6 @@ public class CompanyDAO extends BaseDAO {
 		}
 	}
 
-	public List findByProperty1(String propertyName, Object value) {		
-				log.debug("finding Company instance with property: " + propertyName		
-						+ ", value: " + value);		
-				try {		
-					Query queryObject=null;		
-					if(propertyName.equals("rname")){		
-						String queryString = "from Company as s where s.record.rname=:rname";		
-						//System.out.println(queryString);		
-						queryObject = getSession().createQuery(queryString);		
-						queryObject.setProperties(value);		
-					}		
-					else{		
-						String queryString = "from Company as model where model."		
-							+ propertyName + "= ?";		
-						queryObject = getSession().createQuery(queryString);		
-						queryObject.setParameter(0, value);		
-					}		
-					List<Company> list=queryObject.list();		
-					return queryObject.list();		
-				} catch (RuntimeException re) {		
-					log.error("find by property name failed", re);		
-					throw re;		
-				}		
-			}
-	
 	public Company findById(java.lang.Integer id) {
 		log.debug("getting Company instance with id: " + id);
 		try {
@@ -124,6 +98,30 @@ public class CompanyDAO extends BaseDAO {
 					+ propertyName + "= ?";
 			Query queryObject = getSession().createQuery(queryString);
 			queryObject.setParameter(0, value);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+
+	public List findByProperty1(String propertyName, Object value) {
+		log.debug("finding Company instance with property: " + propertyName
+				+ ", value: " + value);
+		try {
+			Query queryObject = null;
+			if (propertyName.equals("rname")) {
+				String queryString = "from Company as s where s.record.rname=:rname";
+				// System.out.println(queryString);
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setProperties(value);
+			} else {
+				String queryString = "from Company as model where model."
+						+ propertyName + "= ?";
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setParameter(0, value);
+			}
+			List<Company> list = queryObject.list();
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
