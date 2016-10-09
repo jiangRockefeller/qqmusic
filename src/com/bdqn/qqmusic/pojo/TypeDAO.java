@@ -90,6 +90,31 @@ public class TypeDAO extends BaseDAO {
 		}
 	}
 
+	// What's the difference between property1 and property???
+	public List findByProperty1(String propertyName, Object value) {
+		log.debug("finding Type instance with property: " + propertyName
+				+ ", value: " + value);
+		try {
+			Query queryObject = null;
+			if (propertyName.equals("rname")) {
+				String queryString = "from Type as s where s.record.rname=:rname";
+				// System.out.println(queryString);
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setProperties(value);
+			} else {
+				String queryString = "from Type as model where model."
+						+ propertyName + "= ?";
+				queryObject = getSession().createQuery(queryString);
+				queryObject.setParameter(0, value);
+			}
+			List<Type> list = queryObject.list();
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+
 	public List findByTtype(Object ttype) {
 		return findByProperty(TTYPE, ttype);
 	}
@@ -139,4 +164,17 @@ public class TypeDAO extends BaseDAO {
 			throw re;
 		}
 	}
+
+	// 自己编写的编辑方法
+	public void update(Type transientInstances) {
+		log.debug("updating Type instance");
+		try {
+			getSession().update(transientInstances);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
+			throw re;
+		}
+	}
+
 }

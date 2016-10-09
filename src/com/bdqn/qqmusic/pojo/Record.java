@@ -1,5 +1,6 @@
 package com.bdqn.qqmusic.pojo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +10,7 @@ import java.util.Set;
  */
 
 public class Record implements java.io.Serializable {
-
+	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 	// Fields
 
 	private Integer rid;
@@ -107,9 +108,11 @@ public class Record implements java.io.Serializable {
 	public void setRmainartist(String rmainartist) {
 		this.rmainartist = rmainartist;
 	}
-
-	public Date getRdate() {
-		return this.rdate;
+	
+	//重新映射前先存档,去掉日期时分秒
+	public String getRdate() {
+		String date=sdf.format(this.rdate);
+		return date;
 	}
 
 	public void setRdate(Date rdate) {

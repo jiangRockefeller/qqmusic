@@ -13,5 +13,13 @@
         <property name="ccompany" type="java.lang.String">
             <column name="ccompany" unique="true" />
         </property>
+        <set name="records" inverse="true">
+            <key>
+                <column name="rcid">
+                    <comment>company</comment>
+                </column>
+            </key>
+            <one-to-many class="com.bdqn.qqmusic.pojo.Record" />
+        </set>
     </class>
 </hibernate-mapping>
