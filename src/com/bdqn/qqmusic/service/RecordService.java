@@ -125,46 +125,145 @@ public class RecordService implements IRecordService {
 	@Override
 	public List<Record> getRecordsByCompany(Company company) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		 Session session=HibernateSessionFactory.getSession();
+			Transaction tx=session.beginTransaction();
+			List<Record> list=new ArrayList<Record>();
+			RecordDAO recordDAO=new RecordDAO();
+			
+			try{
+				list=recordDAO.getRecordsByCompany(company);
+				tx.commit();
+			}catch(RuntimeException e){
+				e.printStackTrace();
+				tx.rollback();
+			}finally{
+				session.close();
+			}
+			return list;
+		}
+
 
 	@Override
 	public List<Record> getRecordsByCompanyPageNum(Company company,
 			int pageNum, int line) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		 Session session=HibernateSessionFactory.getSession();
+			Transaction tx=session.beginTransaction();
+			List<Record> list=new ArrayList<Record>();
+			RecordDAO recordDAO=new RecordDAO();
+			
+			try{
+				list=recordDAO.getRecordsByCompanyPageNum(company, pageNum, line);
+				tx.commit();
+			}catch(RuntimeException e){
+				e.printStackTrace();
+				tx.rollback();
+			}finally{
+				session.close();
+			}
+			return list;
+		}
+
 
 	@Override
 	public List<Record> getRecordsByLanguage(Language language) {
 		// TODO Auto-generated method stub
-		return null;
+		Session session=HibernateSessionFactory.getSession();
+		Transaction tx=session.beginTransaction();
+		List<Record> list=new ArrayList<Record>();
+		RecordDAO recordDAO=new RecordDAO();
+		
+		try{
+			list=recordDAO.getRecordsByLanguage(language);
+			tx.commit();
+		}catch(RuntimeException e){
+			e.printStackTrace();
+			tx.rollback();
+		}finally{
+			session.close();
+		}
+		return list;
 	}
 
 	@Override
 	public List<Record> getRecotdsByLanguagePageNum(Language language,
 			int pageNum, int line) {
 		// TODO Auto-generated method stub
-		return null;
+		Session session=HibernateSessionFactory.getSession();
+		Transaction tx=session.beginTransaction();
+		List<Record> list=new ArrayList<Record>();
+		RecordDAO recordDAO=new RecordDAO();
+		
+		try{
+			list=recordDAO.getRecotdsByLanguagePageNum(language, pageNum, line);
+			tx.commit();
+		}catch(RuntimeException e){
+			e.printStackTrace();
+			tx.rollback();
+		}finally{
+			session.close();
+		}
+		return list;
 	}
+	
 
 	@Override
 	public List<Record> getRecordsByType(Type type) {
 		// TODO Auto-generated method stub
-		return null;
+		Session session=HibernateSessionFactory.getSession();
+		Transaction tx=session.beginTransaction();
+		List<Record> list=new ArrayList<Record>();
+		RecordDAO recordDAO=new RecordDAO();
+		
+		try{
+			list=recordDAO.getRecordsByType(type);
+			tx.commit();
+		}catch(RuntimeException e){
+			e.printStackTrace();
+			tx.rollback();
+		}finally{
+			session.close();
+		}
+		return list;
 	}
-
 	@Override
 	public List<Record> getRecordByTypePageNum(Type type, int pageNum, int line) {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		 Session session=HibernateSessionFactory.getSession();
+			Transaction tx=session.beginTransaction();
+			List<Record> list=new ArrayList<Record>();
+			RecordDAO recordDAO=new RecordDAO();
+			
+			try{
+				list=recordDAO.getRecordByTypePageNum(type, pageNum, line);
+				tx.commit();
+			}catch(RuntimeException e){
+				e.printStackTrace();
+				tx.rollback();
+			}finally{
+				session.close();
+			}
+			return list;
+		}
+
 
 	@Override
 	public void saveOrUpdateRecord(Record record) {
 		// TODO Auto-generated method stub
-
-	}
+		 Session session=HibernateSessionFactory.getSession();
+			Transaction tx=session.beginTransaction();		
+			RecordDAO recordDAO=new RecordDAO();
+			
+			try{
+				recordDAO.attachDirty(record);
+				tx.commit();
+			}catch(RuntimeException e){
+				e.printStackTrace();
+				tx.rollback();
+			}finally{
+				session.close();
+			}
+		}
 
 	/*-↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑未完成↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-*/
 	@Override
@@ -194,7 +293,7 @@ public class RecordService implements IRecordService {
 		RecordDAO rd = new RecordDAO();
 		Transaction tx = HibernateSessionFactory.getSession()
 				.beginTransaction();
-		List R = rd.findByProperty("rname;", name);
+		List R = rd.findByProperty("rname", name);
 		tx.commit();
 
 		return (Record) R.get(0);

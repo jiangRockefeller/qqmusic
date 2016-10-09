@@ -243,6 +243,37 @@ public class RecordDAO extends BaseDAO {
 		List<Record> list = q.list();
 		return list;
 	}
+
+	
+	public List<Record> getRecotdsByLanguagePageNum(Language language, int pageNum, int line){
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session.createQuery("from Record record where record.language.lid=:lid");
+		q.setProperties(language);
+		q.setFirstResult((pageNum-1)*line);
+		q.setMaxResults(line);
 		
+		List<Record> list = q.list();
+		return list;
+	}
+	
+	public List<Record> getRecordsByType(Type type){
+		Session session=HibernateSessionFactory.getSession();
+		Query q=session.createQuery("from Record record where record.type.tid=:tid");
+		q.setProperties(type);
+		List<Record> list = q.list();
+		return list;
+	}
+
+	public List<Record> getRecordByTypePageNum(Type type, int pageNum, int line){
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session.createQuery("from Record record where record.language.tid=:tid");
+		q.setProperties(type);
+		q.setFirstResult((pageNum-1)*line);
+		q.setMaxResults(line);
 		
+		List<Record> list = q.list();
+		return list;
+	}
 }
+		
+
