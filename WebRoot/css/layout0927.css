@@ -2,9 +2,9 @@
 
 @font-face {
 	font-family: poppin;
-	src: url(font/poppin.eot?max_age=2592000);
-	src: url(font/poppin.eot?#iefix) format("embedded-opentype"),
-		url(font/poppin.ttf?max_age=2592000) format("truetype")
+	src: url(../font/poppin.tff);
+	/* src: url(font/poppin.eot?#iefix) format("embedded-opentype"),
+		url(font/poppin.ttf?max_age=2592000) format("truetype") */
 }
 
 blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,html,input,lengend,li,ol,p,pre,td,textarea,th,ul
@@ -190,9 +190,9 @@ supports  (-webkit-appearance:none ){ .
 	display: inline-block;
 	margin-right: 6px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	background-repeat: no-repeat;
 	vertical-align: -3px
 }
@@ -417,7 +417,7 @@ supports  (-webkit-appearance:none ){ .
 	line-height: 15px;
 	margin-right: 10px;
 	background:
-		url(images/icon_sprite.png)
+		url(../images/icon_sprite.png)
 		-180px -40px
 }
 
@@ -453,9 +453,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 12px;
 	height: 7px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	background-position: -120px -280px
 }
 
@@ -797,9 +797,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 14px;
 	height: 14px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x)
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x) */
 }
 
 .upload_slider__left {
@@ -826,9 +826,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 15px;
 	height: 15px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	background-position: -180px -80px;
 	border-radius: 10px
 }
@@ -1581,9 +1581,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 16px;
 	height: 16px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	background-position: 0 -40px
 }
 
@@ -1629,9 +1629,9 @@ supports  (-webkit-appearance:none ){ .
 	height: 16px;
 	overflow: hidden;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	background-repeat: no-repeat
 }
 
@@ -1733,9 +1733,9 @@ supports  (-webkit-appearance:none ){ .
 
 .icon_history_clear,.search_history__icon_delete {
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x)
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x) */
 }
 
 .search_history__clear {
@@ -1932,8 +1932,8 @@ supports  (-webkit-appearance:none ){ .
 	width: 48px;
 	height: 48px;
 	background-image:
-		url(img/footer.png?max_age=2592000&v=4739050c9bfc2db438241313ce65f4bf);
-	background-image: -webkit-image-set(url(img/footer.png) 1x, url(img/footer@2x.png) 2x)
+		url(../images/footer.png);
+	/* background-image: -webkit-image-set(url(img/footer.png) 1x, url(img/footer@2x.png) 2x) */
 }
 
 .icon_qm_pc {
@@ -2032,9 +2032,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 50px;
 	height: 50px;
 	background-image:
-		url(images/icon_sprite.png);
-	background-image: -webkit-image-set(url(images/icon_sprite.png) 1x,
-		url(images/icon_sprite@2x.png) 2x);
+		url(../images/icon_sprite.png);
+	/* background-image: -webkit-image-set(url(../images/icon_sprite.png) 1x,
+		url(../images/icon_sprite@2x.png) 2x); */
 	z-index: 4
 }
 
