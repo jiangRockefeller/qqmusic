@@ -41,9 +41,9 @@
 	width: 36px;
 	height: 36px;
 	background-image:
-		url(img/icon_list_menu.png?max_age=2592000&v=873fb6560497db4abbe63767018022eb);
-	background-image: -webkit-image-set(url(img/icon_list_menu.png) 1x,
-		url(img/icon_list_menu@2x.png) 2x);
+		url(images/icon_list_menu.png);
+	background-image: -webkit-image-set(url(images/icon_list_menu.png) 1x,
+		url(images/icon_list_menu@2x.png) 2x);
 	background-repeat: no-repeat
 }
 
@@ -1631,9 +1631,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 36px;
 	height: 36px;
 	background-image:
-		url(img/icon_list_menu.png?max_age=2592000&v=873fb6560497db4abbe63767018022eb);
-	background-image: -webkit-image-set(url(img/icon_list_menu.png) 1x,
-		url(img/icon_list_menu@2x.png) 2x);
+		url(images/icon_list_menu.png);
+	background-image: -webkit-image-set(url(images/icon_list_menu.png) 1x,
+		url(images/icon_list_menu@2x.png) 2x);
 	background-position: 0 -160px
 }
 
@@ -1682,9 +1682,9 @@ supports  (-webkit-appearance:none ){ .
 	width: 36px;
 	height: 36px;
 	background-image:
-		url(img/icon_list_menu.png?max_age=2592000&v=873fb6560497db4abbe63767018022eb);
-	background-image: -webkit-image-set(url(img/icon_list_menu.png) 1x,
-		url(img/icon_list_menu@2x.png) 2x);
+		url(images/icon_list_menu.png);
+	background-image: -webkit-image-set(url(images/icon_list_menu.png) 1x,
+		url(images/icon_list_menu@2x.png) 2x);
 	background-position: 0 -160px
 }
 
