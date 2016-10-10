@@ -1,5 +1,13 @@
 package com.bdqn.qqmusic.action;
 
-public class ProfileAction {
+import com.opensymphony.xwork2.ActionSupport;
 
+public class ProfileAction extends ActionSupport{
+
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		return super.execute();
+	}
+	
 }
