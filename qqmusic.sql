@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2016-10-06 12:03:03
+Date: 2016-10-10 16:42:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `artist`;
 CREATE TABLE `artist` (
-  `aid` int(11) NOT NULL,
+  `aid` int(11) NOT NULL AUTO_INCREMENT,
   `aname` varchar(255) NOT NULL,
   `agraduation` varchar(50) DEFAULT NULL,
   `anationality` varchar(255) DEFAULT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `artist` (
   PRIMARY KEY (`aid`),
   KEY `fkANID` (`anid`),
   CONSTRAINT `fkANID` FOREIGN KEY (`anid`) REFERENCES `nation` (`nid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of artist
@@ -150,7 +150,7 @@ INSERT INTO `nation` VALUES ('5', '韩国', '韩语');
 -- ----------------------------
 DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record` (
-  `rid` int(11) NOT NULL,
+  `rid` int(11) NOT NULL AUTO_INCREMENT,
   `rname` varchar(255) NOT NULL,
   `rmainartist` varchar(255) NOT NULL COMMENT '主要艺人',
   `rdate` date DEFAULT NULL,
@@ -168,7 +168,7 @@ CREATE TABLE `record` (
   CONSTRAINT `fkACID` FOREIGN KEY (`rcid`) REFERENCES `company` (`cid`),
   CONSTRAINT `fkAGID` FOREIGN KEY (`rtid`) REFERENCES `type` (`tid`),
   CONSTRAINT `fkALID` FOREIGN KEY (`rlid`) REFERENCES `language` (`lid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of record
@@ -194,78 +194,115 @@ INSERT INTO `record` VALUES ('16', 'Dig Out Your Soul', 'Oasis', '2008-10-06', n
 -- ----------------------------
 DROP TABLE IF EXISTS `song`;
 CREATE TABLE `song` (
-  `sid` int(11) NOT NULL,
+  `sid` int(11) NOT NULL AUTO_INCREMENT,
   `sname` varchar(255) NOT NULL,
   `srid` int(11) NOT NULL,
   `said` int(11) NOT NULL,
   `scompose` varchar(255) DEFAULT NULL,
+  `sduration` time DEFAULT '00:04:13' COMMENT '时长',
   `sarrangement` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`sid`),
   KEY `fkSAID` (`srid`),
   KEY `fkSSGID` (`said`),
-  CONSTRAINT `song_artist` FOREIGN KEY (`said`) REFERENCES `artist` (`aid`),
-  CONSTRAINT `song_record` FOREIGN KEY (`srid`) REFERENCES `record` (`rid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `duration` (`sid`),
+  KEY `sduration` (`sid`),
+  CONSTRAINT `said-aid` FOREIGN KEY (`said`) REFERENCES `artist` (`aid`),
+  CONSTRAINT `srid-rid` FOREIGN KEY (`srid`) REFERENCES `record` (`rid`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of song
 -- ----------------------------
-INSERT INTO `song` VALUES ('1', '陪你度过漫长岁月', '1', '1', '黎晓阳/谢国维', '黎晓阳/谢国维');
-INSERT INTO `song` VALUES ('2', '一切随风', '2', '2', '唐奕聪', null);
-INSERT INTO `song` VALUES ('3', '我', '2', '2', '张国荣', '赵增熹');
-INSERT INTO `song` VALUES ('4', '男人悲剧', '3', '3', null, null);
-INSERT INTO `song` VALUES ('5', '曾经', '4', '4', '张简君伟', null);
-INSERT INTO `song` VALUES ('6', '笑一笑', '5', '5', '陈建德', 'Adam Lee/蔡晓恩');
-INSERT INTO `song` VALUES ('7', '不同班同学', '6', '6', '曾奕文', '何秉舜');
-INSERT INTO `song` VALUES ('8', '来日方长', '7', '7', '常石磊/袁娅维', '常石磊');
-INSERT INTO `song` VALUES ('9', '骑单车的日子', '8', '8', '金大洲', '彭程');
-INSERT INTO `song` VALUES ('10', '相爱恨早', '9', '9', '钱雷', '捞仔');
-INSERT INTO `song` VALUES ('11', '去伊犁的路上', '10', '10', '刀郎', '刀郎');
-INSERT INTO `song` VALUES ('12', '不睡', '11', '11', '陈珊妮', null);
-INSERT INTO `song` VALUES ('13', '说走就走', '12', '12', '周杰伦', '周杰伦');
-INSERT INTO `song` VALUES ('14', 'R.O.D.', '14', '14', 'TEDDY', 'TEDDY');
-INSERT INTO `song` VALUES ('15', 'Cold Water(Lost Frequencies Remix)', '15', '15', 'King Henry/Benny Blanco/Jr Blender/Diplo', null);
+INSERT INTO `song` VALUES ('1', '陪你度过漫长岁月', '1', '1', '黎晓阳/谢国维', '00:00:00', '黎晓阳/谢国维');
+INSERT INTO `song` VALUES ('2', '一切随风', '2', '2', '唐奕聪', '00:00:00', null);
+INSERT INTO `song` VALUES ('3', '我', '2', '2', '张国荣', '00:00:00', '赵增熹');
+INSERT INTO `song` VALUES ('4', '男人悲剧', '3', '3', null, '00:00:00', null);
+INSERT INTO `song` VALUES ('5', '曾经', '4', '4', '张简君伟', '00:00:00', null);
+INSERT INTO `song` VALUES ('6', '笑一笑', '5', '5', '陈建德', '00:00:00', 'Adam Lee/蔡晓恩');
+INSERT INTO `song` VALUES ('7', '不同班同学', '6', '6', '曾奕文', '00:00:00', '何秉舜');
+INSERT INTO `song` VALUES ('8', '来日方长', '7', '7', '常石磊/袁娅维', '00:00:00', '常石磊');
+INSERT INTO `song` VALUES ('9', '骑单车的日子', '8', '8', '金大洲', '00:00:00', '彭程');
+INSERT INTO `song` VALUES ('10', '相爱恨早', '9', '9', '钱雷', '00:00:00', '捞仔');
+INSERT INTO `song` VALUES ('11', '去伊犁的路上', '10', '10', '刀郎', '00:00:00', '刀郎');
+INSERT INTO `song` VALUES ('12', '不睡', '11', '11', '陈珊妮', '00:00:00', null);
+INSERT INTO `song` VALUES ('13', '说走就走', '12', '12', '周杰伦', '00:00:00', '周杰伦');
+INSERT INTO `song` VALUES ('14', 'R.O.D.', '14', '14', 'TEDDY', '00:00:00', 'TEDDY');
+INSERT INTO `song` VALUES ('15', 'Cold Water(Lost Frequencies Remix)', '15', '15', 'King Henry/Benny Blanco/Jr Blender/Diplo', '00:00:00', null);
 
 -- ----------------------------
 -- Table structure for `songlist`
 -- ----------------------------
 DROP TABLE IF EXISTS `songlist`;
 CREATE TABLE `songlist` (
-  `slid` int(11) NOT NULL,
+  `slid` int(11) NOT NULL AUTO_INCREMENT,
   `slsmid` int(11) NOT NULL,
   `slsid` int(11) NOT NULL,
-  `slcreateDate` datetime DEFAULT NULL,
+  `slcreateDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`slid`),
   KEY `fkLID` (`slsmid`),
   KEY `fkSID` (`slsid`),
-  CONSTRAINT `fkLID` FOREIGN KEY (`slsmid`) REFERENCES `songlistmanage` (`smid`),
-  CONSTRAINT `playlist_song` FOREIGN KEY (`slsid`) REFERENCES `song` (`sid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `slsid-sid` FOREIGN KEY (`slsid`) REFERENCES `song` (`sid`),
+  CONSTRAINT `slsmid-smid` FOREIGN KEY (`slsmid`) REFERENCES `songlistmanage` (`smid`)
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of songlist
 -- ----------------------------
+INSERT INTO `songlist` VALUES ('112', '1', '11', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('113', '1', '1', '2016-10-09 22:03:37');
+INSERT INTO `songlist` VALUES ('114', '1', '3', '2016-10-09 22:03:39');
+INSERT INTO `songlist` VALUES ('115', '1', '8', '2016-10-09 22:03:41');
+INSERT INTO `songlist` VALUES ('116', '1', '8', '2016-10-09 22:03:44');
+INSERT INTO `songlist` VALUES ('117', '1', '9', '2016-10-09 22:03:46');
+INSERT INTO `songlist` VALUES ('118', '1', '11', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('119', '1', '7', '2016-10-09 22:03:49');
+INSERT INTO `songlist` VALUES ('120', '2', '3', '2016-10-09 22:03:52');
+INSERT INTO `songlist` VALUES ('121', '2', '9', '2016-10-09 22:03:55');
+INSERT INTO `songlist` VALUES ('122', '2', '8', '2016-10-09 22:03:57');
+INSERT INTO `songlist` VALUES ('123', '2', '3', '2016-10-09 22:04:00');
+INSERT INTO `songlist` VALUES ('124', '2', '2', '2016-10-09 22:04:02');
+INSERT INTO `songlist` VALUES ('125', '2', '1', '2016-10-09 22:04:04');
+INSERT INTO `songlist` VALUES ('126', '2', '3', '2016-10-09 22:04:05');
+INSERT INTO `songlist` VALUES ('127', '2', '1', '2016-10-09 22:04:07');
+INSERT INTO `songlist` VALUES ('128', '2', '5', '2016-10-09 22:04:09');
+INSERT INTO `songlist` VALUES ('129', '2', '4', '2016-10-09 22:04:11');
+INSERT INTO `songlist` VALUES ('130', '2', '10', '2016-10-09 22:04:12');
+INSERT INTO `songlist` VALUES ('131', '2', '5', '2016-10-09 22:04:13');
+INSERT INTO `songlist` VALUES ('132', '2', '10', '2016-10-09 22:04:17');
+INSERT INTO `songlist` VALUES ('133', '3', '1', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('134', '3', '10', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('135', '3', '2', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('136', '3', '3', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('137', '3', '2', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('138', '3', '3', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('139', '3', '1', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('140', '3', '3', '2016-10-09 22:03:05');
+INSERT INTO `songlist` VALUES ('141', '3', '4', '2016-10-09 22:03:05');
 
 -- ----------------------------
 -- Table structure for `songlistmanage`
 -- ----------------------------
 DROP TABLE IF EXISTS `songlistmanage`;
 CREATE TABLE `songlistmanage` (
-  `smid` int(11) NOT NULL,
+  `smid` int(11) NOT NULL AUTO_INCREMENT,
   `smname` varchar(255) NOT NULL,
   `smuid` int(11) NOT NULL,
-  `smcreatedate` datetime(6) DEFAULT NULL,
+  `smcreatedate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `smcallcount` int(11) DEFAULT NULL,
   `smcoverpath` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`smid`),
   KEY `fkLUID` (`smuid`),
-  CONSTRAINT `fkLUID` FOREIGN KEY (`smuid`) REFERENCES `user` (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `smuid-uid` FOREIGN KEY (`smuid`) REFERENCES `user` (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of songlistmanage
 -- ----------------------------
-INSERT INTO `songlistmanage` VALUES ('1', 'hello', '1', '0000-00-00 00:00:00.000000', null, null);
+INSERT INTO `songlistmanage` VALUES ('1', 'favor', '2', '2016-10-01 21:49:27', null, null);
+INSERT INTO `songlistmanage` VALUES ('2', '战歌', '2', '2016-10-09 22:02:10', null, null);
+INSERT INTO `songlistmanage` VALUES ('3', 'dog man star', '2', '2016-10-09 22:03:00', null, null);
+INSERT INTO `songlistmanage` VALUES ('4', '网易歌单', '2', '2016-10-09 21:49:09', null, null);
+INSERT INTO `songlistmanage` VALUES ('5', '手机歌单', '2', '2016-10-09 21:49:18', null, null);
 
 -- ----------------------------
 -- Table structure for `type`
@@ -293,12 +330,12 @@ INSERT INTO `type` VALUES ('4', '演唱会');
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `uid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
   `uname` varchar(255) NOT NULL,
   `upwd` int(11) NOT NULL,
   `uemail` varchar(255) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
