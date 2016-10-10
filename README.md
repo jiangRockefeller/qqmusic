@@ -19,6 +19,7 @@
 
 
 > log
+
 - **10OCT:** 修改了数据库中和歌单有关的表,同时加了点数据更新了qqmusic.sql,添加了struts2
 - **09OCT:** 修改了src/com/bdqn/qqmusic/service/RecordService.java
 - **08OCT:** 添加了record表,company表,genre表,language表,song表,type表的service层,有部分接口的方法未完全实现
