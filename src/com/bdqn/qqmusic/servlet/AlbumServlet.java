@@ -30,10 +30,7 @@ public class AlbumServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		
-		PrintWriter out = response.getWriter();
-		
-	
-		
+		PrintWriter out = response.getWriter();		
 		RecordService recordService=new RecordService();
 		List<Record> mod_playlist=new ArrayList<Record>();
 		mod_playlist=recordService.getAllRecord();
