@@ -90,32 +90,31 @@ public class GenreDAO extends BaseDAO {
 		}
 	}
 
-	//What is the difference between findByProperty1 and findByProperty???
+	// What is the difference between findByProperty1 and findByProperty???
 	public List findByProperty1(String propertyName, Object value) {
 		log.debug("finding Genre instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			Query queryObject=null;
-			if(propertyName.equals("rname")){
+			Query queryObject = null;
+			if (propertyName.equals("rname")) {
 				String queryString = "from Genre as s where s.record.rname=:rname";
-				//System.out.println(queryString);
+				// System.out.println(queryString);
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setProperties(value);
-			}
-			else{
+			} else {
 				String queryString = "from Genre as model where model."
-					+ propertyName + "= ?";
+						+ propertyName + "= ?";
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setParameter(0, value);
 			}
-			List<Genre> list=queryObject.list();
+			List<Genre> list = queryObject.list();
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
 			throw re;
 		}
 	}
-	
+
 	public List findByGgenre(Object ggenre) {
 		return findByProperty(GGENRE, ggenre);
 	}
@@ -165,18 +164,17 @@ public class GenreDAO extends BaseDAO {
 			throw re;
 		}
 	}
-	
-//以下更新方法为自己编写	
-	 public void update(Genre transientInstances){
-		 log.debug("updating Genre instance");
-		 try{
-			 getSession().update(transientInstances);
-			 log.debug("update successful");
-		 }catch(RuntimeException re){
-			 log.error("update failed", re);
-		     throw re;
-		 }
-		 
-	 }
-	 
+
+	// 以下更新方法为自己编写
+	public void update(Genre transientInstances) {
+		log.debug("updating Genre instance");
+		try {
+			getSession().update(transientInstances);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed", re);
+			throw re;
+		}
+
+	}
 }

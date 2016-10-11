@@ -22,6 +22,11 @@
         <property name="scompose" type="java.lang.String">
             <column name="scompose" />
         </property>
+        <property name="sduration" type="java.sql.Time">
+            <column name="sduration" length="8">
+                <comment>时长</comment>
+            </column>
+        </property>
         <property name="sarrangement" type="java.lang.String">
             <column name="sarrangement" />
         </property>

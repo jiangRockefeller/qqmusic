@@ -1,5 +1,6 @@
 package com.bdqn.qqmusic.pojo;
 
+import java.sql.Time;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,6 +17,7 @@ public class Song implements java.io.Serializable {
 	private Record record;
 	private String sname;
 	private String scompose;
+	private Time sduration;
 	private String sarrangement;
 	private Set songLists = new HashSet(0);
 
@@ -34,11 +36,12 @@ public class Song implements java.io.Serializable {
 
 	/** full constructor */
 	public Song(Artist artist, Record record, String sname, String scompose,
-			String sarrangement, Set songLists) {
+			Time sduration, String sarrangement, Set songLists) {
 		this.artist = artist;
 		this.record = record;
 		this.sname = sname;
 		this.scompose = scompose;
+		this.sduration = sduration;
 		this.sarrangement = sarrangement;
 		this.songLists = songLists;
 	}
@@ -83,6 +86,14 @@ public class Song implements java.io.Serializable {
 
 	public void setScompose(String scompose) {
 		this.scompose = scompose;
+	}
+
+	public Time getSduration() {
+		return this.sduration;
+	}
+
+	public void setSduration(Time sduration) {
+		this.sduration = sduration;
 	}
 
 	public String getSarrangement() {
