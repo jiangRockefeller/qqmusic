@@ -39,17 +39,9 @@
 
   <servlet-mapping>
     <servlet-name>AlbumServlet</servlet-name>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <url-pattern>/album</url-pattern>
-  </servlet-mapping>
-  	
-=======
-=======
->>>>>>> master
-    <url-pattern>/album.servlet</url-pattern>
+	<url-pattern>/album.servlet</url-pattern>
   </servlet-mapping>	
->>>>>>> master
+
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
