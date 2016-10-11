@@ -10,8 +10,7 @@ import java.util.Set;
  */
 
 public class Record implements java.io.Serializable {
-	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-	
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	// Fields
 
 	private Integer rid;
@@ -109,9 +108,10 @@ public class Record implements java.io.Serializable {
 	public void setRmainartist(String rmainartist) {
 		this.rmainartist = rmainartist;
 	}
-	//ÖØĞÂÓ³ÉäÇ°ÏÈ´æµµ,È¥µôÈÕÆÚÊ±·ÖÃë
+
+	// é‡æ–°æ˜ å°„å‰å…ˆå­˜æ¡£,å»æ‰æ—¥æœŸæ—¶åˆ†ç§’
 	public String getRdate() {
-		String date=sdf.format(this.rdate);
+		String date = sdf.format(this.rdate);
 		return date;
 	}
 

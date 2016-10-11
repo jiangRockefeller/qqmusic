@@ -90,25 +90,24 @@ public class LanguageDAO extends BaseDAO {
 			throw re;
 		}
 	}
-	
+
 	public List findByProperty1(String propertyName, Object value) {
 		log.debug("finding Language instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			Query queryObject=null;
-			if(propertyName.equals("rname")){
+			Query queryObject = null;
+			if (propertyName.equals("rname")) {
 				String queryString = "from Language as s where s.record.rname=:rname";
-				//System.out.println(queryString);
+				// System.out.println(queryString);
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setProperties(value);
-			}
-			else{
+			} else {
 				String queryString = "from Language as model where model."
-					+ propertyName + "= ?";
+						+ propertyName + "= ?";
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setParameter(0, value);
 			}
-			List<Language> list=queryObject.list();
+			List<Language> list = queryObject.list();
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
@@ -165,19 +164,16 @@ public class LanguageDAO extends BaseDAO {
 			throw re;
 		}
 	}
-	
-	
-	//自己编写的更新方法
-	 public void update(Language transientInstances){
-		 log.debug("updating Language instance");
-	     try{
-		    getSession().update(transientInstances);
-		    log.debug("update successful");		 
-	     }catch(RuntimeException re){
-	  	    log.error("update failed");
-		     throw re;
-	     }
-     }
-	
-	
+
+	// 自己编写的更新方法
+	public void update(Language transientInstances) {
+		log.debug("updating Language instance");
+		try {
+			getSession().update(transientInstances);
+			log.debug("update successful");
+		} catch (RuntimeException re) {
+			log.error("update failed");
+			throw re;
+		}
+	}
 }

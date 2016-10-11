@@ -39,9 +39,10 @@ public class AlbumServlet extends HttpServlet {
 			System.out.println(record.getRname()+" "+record.getRdate());
 		}
 		request.getSession().setAttribute("all", mod_playlist);
-		response.sendRedirect("../qqmusic/album.jsp");
-		out.flush();
-		out.close();
+		//弄了struts不用在servlet跳转,
+		//response.sendRedirect("../qqmusic/album.jsp");
+		//out.flush();
+		//out.close();
 	}
 
 	/**
