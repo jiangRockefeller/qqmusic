@@ -17,10 +17,13 @@
 =======
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.7-bin.jar"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.struts2.MYECLIPSE_STRUTS21_CORE"/>
+<<<<<<< HEAD
 >>>>>>> c8a1fc2be3d51578472d1ab6858b93c9527d6feb
 <<<<<<< HEAD
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+>>>>>>> c8a1fc2be3d51578472d1ab6858b93c9527d6feb
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
