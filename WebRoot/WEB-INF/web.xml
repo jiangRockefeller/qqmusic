@@ -40,10 +40,13 @@
   <servlet-mapping>
     <servlet-name>AlbumServlet</servlet-name>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <url-pattern>/album</url-pattern>
   </servlet-mapping>
   	
 =======
+=======
+>>>>>>> master
     <url-pattern>/album.servlet</url-pattern>
   </servlet-mapping>	
 >>>>>>> master
