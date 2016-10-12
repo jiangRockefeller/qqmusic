@@ -11,6 +11,7 @@
             <generator class="increment"></generator>
         </id>
         
+
         
         
         
@@ -28,7 +29,7 @@
         
 
         
-        
+
             <column name="said" not-null="true" />
         </many-to-one>
         <many-to-one name="record" class="com.bdqn.qqmusic.pojo.Record" fetch="select" lazy="false">
