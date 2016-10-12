@@ -39,7 +39,7 @@
   	</servlet>
 	<servlet-mapping>
 		<servlet-name>SingerListServlet</servlet-name>
-		<url-pattern>/singerlist</url-pattern>
+		<url-pattern>/singerlist.servlet</url-pattern>
 	</servlet-mapping>
 
 <!-- 	<filter-mapping>
@@ -65,7 +65,11 @@
     <url-pattern>/toplist.servlet</url-pattern>
   </servlet-mapping>	
 
-
+  <servlet-mapping>
+    <servlet-name>AlbumCo</servlet-name>
+    <url-pattern>/albumCo.servlet</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
