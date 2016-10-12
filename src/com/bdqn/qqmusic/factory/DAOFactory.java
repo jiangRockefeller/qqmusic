@@ -1,7 +1,11 @@
 package com.bdqn.qqmusic.factory;
 
 import com.bdqn.qqmusic.dao.BaseDAO;
-
+/**
+ * 请忽略这个类,原来的时候想弄一个类似genericDAO的东西,一个工厂自动返回DAO实例,后来发现搞不成,先不搞了,请无视这个类.
+ * @author Moriken
+ *
+ */
 public class DAOFactory {
 	private static String DAO=null;
 	private String x=null;

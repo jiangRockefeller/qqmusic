@@ -384,8 +384,9 @@ if(window.ActiveXObject || window.msIsStaticHTML){
             </div>
             <div class="mod_playlist mod_playlist--all">
                 <ul class="playlist__list" id="album_list">
+                
 <!-- 专辑筛选遍历展示  -->
-<c:forEach items="${all}" var="record">                
+<c:forEach items="${sessionScope.all}" var="record">                
 <li class="playlist__item" data-albummid="001VHkqi3kBVce" 
 						   onmouseover=""  
 						   onmouseout=""> 
@@ -397,13 +398,15 @@ if(window.ActiveXObject || window.msIsStaticHTML){
 			   class="js_album" 
 			   data-stat="y_new.album_lib.album_pic" 
 			   data-albummid="001VHkqi3kBVce">
-				<img src="images/T002R300x300M000004AhJHV3slLjN.jpg"  
+				<img src="images/ly.jpg"  
 					 alt="琅琊榜 电视剧原声带" 
 					 class="playlist__pic" 
 					 style="display: block; 
 					 visibility: visible;">
 				<i class="mod_cover__icon_play js_play" data-stat="y_new.album_lib.album_play"></i>
 			</a>
+			
+			
 		</div>
 		<h4 class="playlist__title">
 			<span class="playlist__title_txt">

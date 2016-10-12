@@ -29,7 +29,19 @@ public class SongListManageDAO extends BaseDAO {
 	public static final String SMNAME = "smname";
 	public static final String SMCALLCOUNT = "smcallcount";
 	public static final String SMCOVERPATH = "smcoverpath";
-
+	
+/*---------------------------以下是手动添加的方法---------------------------*/	
+	//获取用户的"我喜欢"歌单,即查找创建时间最早的歌单
+	public SongListManage getFavList(User user){
+		String hql="select min(SongListManage.smcreatedate) from SongListManage songListManage where songListManage.user.uid=:uid ";
+		Query query=getSession().createQuery(hql);
+		query.setProperties(user);
+		SongListManage fav=new SongListManage();
+		fav=(SongListManage)query.uniqueResult();
+		return fav;
+	}
+/*------------------------------------------------------------------------*/
+	
 	public void save(SongListManage transientInstance) {
 		log.debug("saving SongListManage instance");
 		try {
