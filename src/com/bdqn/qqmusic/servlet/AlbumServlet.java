@@ -42,16 +42,12 @@ public class AlbumServlet extends HttpServlet {
 			System.out.println(record.getRname()+" "+record.getRdate());
 		}
 		request.getSession().setAttribute("all", mod_playlist);
-<<<<<<< HEAD
-		response.sendRedirect("album.jsp");
-		out.flush();
-		out.close();
-=======
+
 		//弄了struts不用在servlet跳转,
 		//response.sendRedirect("../qqmusic/album.jsp");
 		//out.flush();
 		//out.close();
->>>>>>> c8a1fc2be3d51578472d1ab6858b93c9527d6feb
+
 	}
 
 	/**
