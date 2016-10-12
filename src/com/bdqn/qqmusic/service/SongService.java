@@ -191,11 +191,5 @@ public class SongService implements ISongService {
 		}
 		return list;
 	}
-<<<<<<< HEAD
-	
 
->>>>>>> 06105657a1822f3c526c7496ee1969e4f35c4dbf
-=======
-
->>>>>>> c8a1fc2be3d51578472d1ab6858b93c9527d6feb
 }
