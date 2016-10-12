@@ -11,7 +11,26 @@
             <generator class="increment"></generator>
         </id>
         
+
+        
+        
+        
+ 
+        
+        
+        
+        
         <many-to-one name="artist" class="com.bdqn.qqmusic.pojo.Artist" fetch="select" lazy="false">
+        
+        
+        
+        
+        
+        
+
+        
+        
+
             <column name="said" not-null="true" />
         </many-to-one>
         <many-to-one name="record" class="com.bdqn.qqmusic.pojo.Record" fetch="select" lazy="false">
@@ -22,6 +41,11 @@
         </property>
         <property name="scompose" type="java.lang.String">
             <column name="scompose" />
+        </property>
+        <property name="sduration" type="java.sql.Time">
+            <column name="sduration" length="8">
+                <comment>时长</comment>
+            </column>
         </property>
         <property name="sarrangement" type="java.lang.String">
             <column name="sarrangement" />

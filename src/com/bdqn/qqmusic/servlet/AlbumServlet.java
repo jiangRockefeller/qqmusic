@@ -32,10 +32,7 @@ public class AlbumServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		
-		PrintWriter out = response.getWriter();
-		
-	
-		
+		PrintWriter out = response.getWriter();		
 		RecordService recordService=new RecordService();
 		List<Record> mod_playlist=new ArrayList<Record>();
 		mod_playlist=recordService.getAllRecord();
@@ -44,27 +41,12 @@ public class AlbumServlet extends HttpServlet {
 			System.out.println(record.getRname()+" "+record.getRdate());
 		}
 		request.getSession().setAttribute("all", mod_playlist);
-		response.sendRedirect("../qqmusic/albumContext.jsp");//重定向 2次转发
-		out.flush();//输出来
-		out.close();//关闭
-		
-		
-//		
-//		//陆嘉豪写的作用域--这个是取歌曲名字
-//		   SongService songService=new SongService();
-//		   List<Song> albumContext=new ArrayList<Song>();
-//		  
-//		   
-//		   albumContext=songService.getAllSongs();
-//		   System.out.println("嘻嘻");
-//		   for(Song song:albumContext){
-//			   System.out.println(song.getSname()+song.getArtist());			   
-//		   }
-//		   request.getSession().setAttribute("name",albumContext);
-//		   response.sendRedirect("../qqmusic/albumContext.jsp");
-//		   out.flush();
-//		   out.close();
-		
+
+		//弄了struts不用在servlet跳转,
+		//response.sendRedirect("../qqmusic/album.jsp");
+		//out.flush();
+		//out.close();
+
 	}
 
 	

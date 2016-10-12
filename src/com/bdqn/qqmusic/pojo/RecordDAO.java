@@ -95,26 +95,25 @@ public class RecordDAO extends BaseDAO {
 			throw re;
 		}
 	}
-	
-	//What's the difference between property1 and property???
+
+	// What's the difference between property1 and property???
 	public List findByProperty1(String propertyName, Object value) {
 		log.debug("finding Record instance with property: " + propertyName
 				+ ", value: " + value);
 		try {
-			Query queryObject=null;
-			if(propertyName.equals("rname")){
+			Query queryObject = null;
+			if (propertyName.equals("rname")) {
 				String queryString = "from Record as s where s.record.rname=:rname";
-				//System.out.println(queryString);
+				// System.out.println(queryString);
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setProperties(value);
-			}
-			else{
+			} else {
 				String queryString = "from Record as model where model."
-					+ propertyName + "= ?";
+						+ propertyName + "= ?";
 				queryObject = getSession().createQuery(queryString);
 				queryObject.setParameter(0, value);
 			}
-			List<Record> list=queryObject.list();
+			List<Record> list = queryObject.list();
 			return queryObject.list();
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
@@ -134,7 +133,7 @@ public class RecordDAO extends BaseDAO {
 		return findByProperty(RCOVERPATH, rcoverpath);
 	}
 
-	//自己编写{
+	// 自己编写{
 	public List<Record> findAll1() {
 		log.debug("finding all Record instances");
 		try {
@@ -146,8 +145,9 @@ public class RecordDAO extends BaseDAO {
 			throw re;
 		}
 	}
-//}
-	
+
+	// }
+
 	public List findAll() {
 		log.debug("finding all Record instances");
 		try {
@@ -193,87 +193,94 @@ public class RecordDAO extends BaseDAO {
 			throw re;
 		}
 	}
-		
-		
-	//以下是自己编写的DAO运行方法
-		
-	public List<Record> getRecordsByGenre(Genre genre){
-		Session session=HibernateSessionFactory.getSession();
-		Query q=session.createQuery("from Record record where record.genre.gid=:gid");
-		q.setProperties(genre);
-		List<Record> list = q.list();
-		return list;
-		
-	}
-	
-	public List<Record> getRecordsByGenrePageNum(Genre genre, int pageNum, int line){
+
+	// 以下是自己编写的DAO运行方法
+
+	public List<Record> getRecordsByGenre(Genre genre) {
 		Session session = HibernateSessionFactory.getSession();
-		Query q = session.createQuery("from Record record where record.genre.gid=:gid");
+		Query q = session
+				.createQuery("from Record record where record.genre.gid=:gid");
 		q.setProperties(genre);
-		q.setFirstResult((pageNum-1)*line);
+		List<Record> list = q.list();
+		return list;
+
+	}
+
+	public List<Record> getRecordsByGenrePageNum(Genre genre, int pageNum,
+			int line) {
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session
+				.createQuery("from Record record where record.genre.gid=:gid");
+		q.setProperties(genre);
+		q.setFirstResult((pageNum - 1) * line);
 		q.setMaxResults(line);
-		
+
 		List<Record> list = q.list();
 		return list;
 	}
-	
-	public List<Record> getRecordsByCompany(Company company){
-		Session session=HibernateSessionFactory.getSession();
-		Query q=session.createQuery("from Record record where record.record.cid=:cid");
+
+	public List<Record> getRecordsByCompany(Company company) {
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session
+				.createQuery("from Record record where record.record.cid=:cid");
 		q.setProperties(company);
 		List<Record> list = q.list();
 		return list;
 	}
-		
-	public List<Record> getRecordsByCompanyPageNum(Company company, int pageNum, int line){
+
+	public List<Record> getRecordsByCompanyPageNum(Company company,
+			int pageNum, int line) {
 		Session session = HibernateSessionFactory.getSession();
-		Query q = session.createQuery("from Record record where record.record.cid=:cid");
+		Query q = session
+				.createQuery("from Record record where record.record.cid=:cid");
 		q.setProperties(company);
-		q.setFirstResult((pageNum-1)*line);
+		q.setFirstResult((pageNum - 1) * line);
 		q.setMaxResults(line);
-		
+
 		List<Record> list = q.list();
 		return list;
 	}
-		
-	public List<Record> getRecordsByLanguage(Language language){
-		Session session=HibernateSessionFactory.getSession();
-		Query q=session.createQuery("from Record record where record.language.lid=:lid");
+
+	public List<Record> getRecordsByLanguage(Language language) {
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session
+				.createQuery("from Record record where record.language.lid=:lid");
 		q.setProperties(language);
 		List<Record> list = q.list();
 		return list;
 	}
 
-	
-	public List<Record> getRecotdsByLanguagePageNum(Language language, int pageNum, int line){
+	public List<Record> getRecotdsByLanguagePageNum(Language language,
+			int pageNum, int line) {
 		Session session = HibernateSessionFactory.getSession();
-		Query q = session.createQuery("from Record record where record.language.lid=:lid");
+		Query q = session
+				.createQuery("from Record record where record.language.lid=:lid");
 		q.setProperties(language);
-		q.setFirstResult((pageNum-1)*line);
+		q.setFirstResult((pageNum - 1) * line);
 		q.setMaxResults(line);
-		
+
 		List<Record> list = q.list();
 		return list;
 	}
-	
-	public List<Record> getRecordsByType(Type type){
-		Session session=HibernateSessionFactory.getSession();
-		Query q=session.createQuery("from Record record where record.type.tid=:tid");
+
+	public List<Record> getRecordsByType(Type type) {
+		Session session = HibernateSessionFactory.getSession();
+		Query q = session
+				.createQuery("from Record record where record.type.tid=:tid");
 		q.setProperties(type);
 		List<Record> list = q.list();
 		return list;
 	}
 
-	public List<Record> getRecordByTypePageNum(Type type, int pageNum, int line){
+	public List<Record> getRecordByTypePageNum(Type type, int pageNum, int line) {
 		Session session = HibernateSessionFactory.getSession();
-		Query q = session.createQuery("from Record record where record.language.tid=:tid");
+		Query q = session
+				.createQuery("from Record record where record.language.tid=:tid");
 		q.setProperties(type);
-		q.setFirstResult((pageNum-1)*line);
+		q.setFirstResult((pageNum - 1) * line);
 		q.setMaxResults(line);
-		
+
 		List<Record> list = q.list();
 		return list;
 	}
 }
-		
-

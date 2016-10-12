@@ -52,5 +52,4 @@ public class Company implements java.io.Serializable {
 	public void setRecords(Set records) {
 		this.records = records;
 	}
-
 }
