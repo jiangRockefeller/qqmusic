@@ -29,6 +29,7 @@
         
 
         
+        
 
             <column name="said" not-null="true" />
         </many-to-one>
