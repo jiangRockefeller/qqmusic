@@ -630,10 +630,10 @@ $('#fans_tab').click(function(){
 				<div class="js_sub" style="display:none;" id="like_mv_box"></div>
 			</div>
 		</div>
-		<!-- 歌单 -->
+<!-- 歌单 -->
 		<div class="js_box profile_cont" id="buy_box" style="display:none;">
 		</div>
-		<!--  我创建的歌单歌单页 -->
+		<!-- 歌单 -->
 		<div class="js_box profile_cont" id="create_box"
 			style="display: none;">
 			<div class="playlist_toolbar">
@@ -651,12 +651,13 @@ $('#fans_tab').click(function(){
 					<a href="javascript:;" class="style_switch__item" title="上图下文"
 						data-type="mod_playlist" data-tab="create"
 						data-stat="y_new.profile.create_playlist.pic_mod"><i
-						class="icon_style_pic"></i><span class="icon_txt">上图下文</span> </a> <a
-						href="javascript:;"
+						class="icon_style_pic"></i><span class="icon_txt">上图下文</span>
+					</a> <a href="javascript:;"
 						class="style_switch__item style_switch__item--select" title="列表"
 						data-type="mod_playlist_text" data-tab="create"
 						data-stat="y_new.profile.create_playlist.list_mod"><i
-						class="icon_style_list"></i><span class="icon_txt">列表</span> </a>
+						class="icon_style_list"></i><span class="icon_txt">列表</span>
+					</a>
 				</div>
 			</div>
 
@@ -677,7 +678,7 @@ $('#fans_tab').click(function(){
 
 							<a
 								href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.qzone.click&dirid=205&hostuin=529497710">
-								<img src="images/cover_qzone.png"
+								<img src="./我的音乐_files/cover_qzone.png"
 								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 								alt="QZone背景音乐" class="playlist__pic"> </a>
 
@@ -709,8 +710,8 @@ $('#fans_tab').click(function(){
 						</div>
 						<div class="playlist__other"></div> <a href="javascript:;"
 						class="playlist__delete js_delcreate_gedan" data-dirid="205"
-						style="display:none;"><span class="icon_txt">删除</span> </a>
-					</li>
+						style="display:none;"><span class="icon_txt">删除</span>
+					</a></li>
 
 					<li class="playlist__item playlist__item--even "
 						data-disstid="790685759" data-uin="529497710" data-dirid="201"
@@ -722,7 +723,7 @@ $('#fans_tab').click(function(){
 								href="http://y.qq.com/portal/playlist/790685759.html#stat=y_new.profile.create_playlist.love.click&dirid=201"
 								class="js_playlist" data-disstid="790685759" data-dirid="201"
 								data-stat="y_new.profile.create_playlist.click"> <img
-								src="images/cover_like.png"
+								src="./我的音乐_files/cover_like.png"
 								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 								alt="我喜欢" class="playlist__pic"> </a>
 
@@ -756,8 +757,8 @@ $('#fans_tab').click(function(){
 						</div>
 						<div class="playlist__other">125</div> <a href="javascript:;"
 						class="playlist__delete js_delcreate_gedan" data-dirid="201"
-						style="display:none;"><span class="icon_txt">删除</span> </a>
-					</li>
+						style="display:none;"><span class="icon_txt">删除</span>
+					</a></li>
 
 					<li class="playlist__item" data-disstid="0" data-uin="529497710"
 						data-dirid="206"
@@ -767,7 +768,7 @@ $('#fans_tab').click(function(){
 
 							<a
 								href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.upload.click&dirid=206&hostuin=529497710">
-								<img src="images/cover_upload.png"
+								<img src="./我的音乐_files/cover_upload.png"
 								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 								alt="本地上传" class="playlist__pic"> </a>
 
@@ -799,8 +800,8 @@ $('#fans_tab').click(function(){
 						</div>
 						<div class="playlist__other"></div> <a href="javascript:;"
 						class="playlist__delete js_delcreate_gedan" data-dirid="206"
-						style="display:none;"><span class="icon_txt">删除</span> </a>
-					</li>
+						style="display:none;"><span class="icon_txt">删除</span>
+					</a></li>
 
 					<li class="playlist__item playlist__item--even "
 						data-disstid="831155592" data-uin="529497710" data-dirid="18"
@@ -812,7 +813,7 @@ $('#fans_tab').click(function(){
 								href="http://y.qq.com/portal/playlist/831155592.html#stat=y_new.profile.create_playlist.click&dirid=18"
 								class="js_playlist" data-disstid="831155592" data-dirid="18"
 								data-stat="y_new.profile.create_playlist.click"> <img
-								src="images/gedan.jpg"
+								src="./我的音乐_files/300_albumpic_169869_0.jpg"
 								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 								alt="Six" class="playlist__pic"> </a>
 
@@ -846,8 +847,8 @@ $('#fans_tab').click(function(){
 						</div>
 						<div class="playlist__other">5</div> <a href="javascript:;"
 						class="playlist__delete js_delcreate_gedan" data-dirid="18"
-						style="display:;"><span class="icon_txt">删除</span> </a>
-					</li>
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
 
 					<li class="playlist__item" data-disstid="831155507"
 						data-uin="529497710" data-dirid="17"
@@ -859,7 +860,7 @@ $('#fans_tab').click(function(){
 								href="http://y.qq.com/portal/playlist/831155507.html#stat=y_new.profile.create_playlist.click&dirid=17"
 								class="js_playlist" data-disstid="831155507" data-dirid="17"
 								data-stat="y_new.profile.create_playlist.click"> <img
-								src="images/300_albumpic_185557_0.jpg"
+								src="./我的音乐_files/300_albumpic_185557_0.jpg"
 								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 								alt="灰灯笼的逆袭" class="playlist__pic"> </a>
 
@@ -895,10 +896,592 @@ $('#fans_tab').click(function(){
 						</div>
 						<div class="playlist__other">8</div> <a href="javascript:;"
 						class="playlist__delete js_delcreate_gedan" data-dirid="17"
-						style="display:;"><span class="icon_txt">删除</span> </a>
-					</li>
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
 
-					
+					<li class="playlist__item playlist__item--even "
+						data-disstid="830977104" data-uin="529497710" data-dirid="16"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/830977104.html#stat=y_new.profile.create_playlist.click&dirid=16"
+								class="js_playlist" data-disstid="830977104" data-dirid="16"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_121151_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="xiami" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/830977104.html#stat=y_new.profile.create_playlist.click&dirid=16"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="830977104" data-dirid="16" title="xiami">xiami</a>
+
+							</span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">768首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">54</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="16"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item" data-disstid="830772580"
+						data-uin="529497710" data-dirid="12"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/830772580.html#stat=y_new.profile.create_playlist.click&dirid=12"
+								class="js_playlist" data-disstid="830772580" data-dirid="12"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_8218_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="on the road" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/830772580.html#stat=y_new.profile.create_playlist.click&dirid=12"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="830772580" data-dirid="12" title="on the road">on
+									the road</a> </span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">164首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">8</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="12"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item playlist__item--even "
+						data-disstid="815646322" data-uin="529497710" data-dirid="11"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/815646322.html#stat=y_new.profile.create_playlist.click&dirid=11"
+								class="js_playlist" data-disstid="815646322" data-dirid="11"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_139996_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="Echobelly" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/815646322.html#stat=y_new.profile.create_playlist.click&dirid=11"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="815646322" data-dirid="11" title="Echobelly">Echobelly</a>
+
+							</span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">18首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">16</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="11"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item" data-disstid="806144818"
+						data-uin="529497710" data-dirid="10"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/806144818.html#stat=y_new.profile.create_playlist.click&dirid=10"
+								class="js_playlist" data-disstid="806144818" data-dirid="10"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_1014525_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="虾米歌单2016216191521" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/806144818.html#stat=y_new.profile.create_playlist.click&dirid=10"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="806144818" data-dirid="10"
+								title="虾米歌单2016216191521">虾米歌单2016216191521</a> </span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">143首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">22</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="10"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item playlist__item--even "
+						data-disstid="806135574" data-uin="529497710" data-dirid="9"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/806135574.html#stat=y_new.profile.create_playlist.click&dirid=9"
+								class="js_playlist" data-disstid="806135574" data-dirid="9"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_444232_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="虾米歌单2016216181155" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/806135574.html#stat=y_new.profile.create_playlist.click&dirid=9"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="806135574" data-dirid="9"
+								title="虾米歌单2016216181155">虾米歌单2016216181155</a> </span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">180首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">16</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="9"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item" data-disstid="790685762"
+						data-uin="529497710" data-dirid="1"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/790685762.html#stat=y_new.profile.create_playlist.click&dirid=1"
+								class="js_playlist" data-disstid="790685762" data-dirid="1"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/cover_playlist.png"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="我最爱听" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/790685762.html#stat=y_new.profile.create_playlist.click&dirid=1"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="790685762" data-dirid="1" title="我最爱听">我最爱听</a> </span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">14首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">13</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="1"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+					<li class="playlist__item playlist__item--even "
+						data-disstid="790685760" data-uin="529497710" data-dirid="6"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__cover">
+
+							<a
+								href="http://y.qq.com/portal/playlist/790685760.html#stat=y_new.profile.create_playlist.click&dirid=6"
+								class="js_playlist" data-disstid="790685760" data-dirid="6"
+								data-stat="y_new.profile.create_playlist.click"> <img
+								src="./我的音乐_files/300_albumpic_17720_0.jpg"
+								onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+								alt="favor" class="playlist__pic"> </a>
+
+						</div>
+						<h4 class="playlist__title">
+							<span class="playlist__title_txt"> <a
+								href="http://y.qq.com/portal/playlist/790685760.html#stat=y_new.profile.create_playlist.click&dirid=6"
+								class="js_playlist"
+								data-stat="y_new.profile.create_playlist.click"
+								data-disstid="790685760" data-dirid="6" title="favor">favor</a>
+
+							</span>
+						</h4>
+						<div class="mod_list_menu">
+							<a href="javascript:;"
+								class="list_menu__item list_menu__play js_play"
+								data-stat="y_new.profile.create_playlist.play" title="播放"> <i
+								class="list_menu__icon_play"></i> <span class="icon_txt">播放</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__add js_fav" title="添加到歌单">
+								<i class="list_menu__icon_add"></i> <span class="icon_txt">添加到歌单</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__down js_down" title="下载">
+								<i class="list_menu__icon_down"></i> <span class="icon_txt">下载</span>
+							</a> <a href="javascript:;"
+								class="list_menu__item list_menu__share js_share" title="分享">
+								<i class="list_menu__icon_share"></i> <span class="icon_txt">分享</span>
+							</a>
+						</div>
+						<div class="playlist__number">835首</div>
+						<div class="playlist__author">
+							<a title=" Vèrve."> Vèrve.</a>
+						</div>
+						<div class="playlist__other">47</div> <a href="javascript:;"
+						class="playlist__delete js_delcreate_gedan" data-dirid="6"
+						style="display:;"><span class="icon_txt">删除</span>
+					</a></li>
+
+				</ul>
+			</div>
+
+			<div class="mod_playlist js_list" style="display:none;">
+				<ul class="playlist__header">
+					<li class="playlist__header_name">歌单</li>
+					<li class="playlist__header_number">曲目数</li>
+					<li class="playlist__header_author">编辑</li>
+					<li class="playlist__header_other">收听</li>
+				</ul>
+				<ul class="playlist__list">
+
+					<li class="playlist__item" data-disstid="0" data-dirid="205"
+						data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.qzone.click&dirid=205&hostuin=529497710">
+									<img src="./我的音乐_files/cover_qzone.png"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="QZone背景音乐" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.qzone.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.qzone.click&dirid=205&hostuin=529497710"
+									title="QZone背景音乐">QZone背景音乐</a> </span>
+							</h4>
+							<div class="playlist__number">2首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other"></div>
+
+							<a href="javascript:;"
+								class="btn_operate_menu js_playlist_more_dirid" data-type="4"
+								data-stat="y_new.profile.create_playlist.qzone.pic_mod_more"
+								data-id="205"><span class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
+
+					<li class="playlist__item" data-disstid="790685759"
+						data-dirid="201" data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/playlist/790685759.html#stat=y_new.profile.create_playlist.love.click&dirid=201"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="790685759" data-dirid="201"> <img
+									src="./我的音乐_files/cover_like.png"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="我喜欢" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.love.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/playlist/790685759.html#stat=y_new.profile.create_playlist.love.click&dirid=201"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="790685759" data-dirid="201" title="我喜欢">我喜欢</a> </span>
+							</h4>
+							<div class="playlist__number">96首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other">125</div>
+
+							<a href="javascript:;" class="btn_operate_menu js_playlist_more"
+								data-type="3" data-id="790685759" data-dirid="201"
+								data-stat="y_new.profile.create_playlist.love.pic_mod_more"><span
+								class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
+
+					<li class="playlist__item" data-disstid="0" data-dirid="206"
+						data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.upload.click&dirid=206&hostuin=529497710">
+									<img src="./我的音乐_files/cover_upload.png"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="本地上传" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.upload.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/mymusic.html#stat=y_new.profile.create_playlist.upload.click&dirid=206&hostuin=529497710"
+									title="本地上传">本地上传</a> </span>
+							</h4>
+							<div class="playlist__number">0首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other"></div>
+
+							<a href="javascript:;"
+								class="btn_operate_menu js_playlist_more_dirid" data-type="4"
+								data-stat="y_new.profile.create_playlist.upload.pic_mod_more"
+								data-id="206"><span class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
+
+					<li class="playlist__item" data-disstid="831155592" data-dirid="18"
+						data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/playlist/831155592.html#stat=y_new.profile.create_playlist.click&dirid=18"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="831155592" data-dirid="18"> <img
+									src="./我的音乐_files/300_albumpic_169869_0.jpg"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="Six" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/playlist/831155592.html#stat=y_new.profile.create_playlist.click&dirid=18"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="831155592" data-dirid="18" title="Six">Six</a> </span>
+							</h4>
+							<div class="playlist__number">13首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other">5</div>
+
+							<a href="javascript:;" class="btn_operate_menu js_playlist_more"
+								data-type="3" data-id="831155592" data-dirid="18"
+								data-stat="y_new.profile.create_playlist.pic_mod_more"
+								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
+
+					<li class="playlist__item" data-disstid="831155507" data-dirid="17"
+						data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/playlist/831155507.html#stat=y_new.profile.create_playlist.click&dirid=17"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="831155507" data-dirid="17"> <img
+									src="./我的音乐_files/300_albumpic_185557_0.jpg"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="灰灯笼的逆袭" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/playlist/831155507.html#stat=y_new.profile.create_playlist.click&dirid=17"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="831155507" data-dirid="17" title="灰灯笼的逆袭">灰灯笼的逆袭</a>
+
+								</span>
+							</h4>
+							<div class="playlist__number">11首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other">8</div>
+
+							<a href="javascript:;" class="btn_operate_menu js_playlist_more"
+								data-type="3" data-id="831155507" data-dirid="17"
+								data-stat="y_new.profile.create_playlist.pic_mod_more"
+								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
+
+					<li class="playlist__item" data-disstid="830977104" data-dirid="16"
+						data-uin="529497710"
+						onmouseover="this.className=(this.className+&#39; playlist__item--hover&#39;)"
+						onmouseout="this.className=this.className.replace(/ playlist__item--hover/, &#39;&#39;)">
+						<div class="playlist__item_box">
+							<div class="playlist__cover mod_cover">
+
+								<a
+									href="http://y.qq.com/portal/playlist/830977104.html#stat=y_new.profile.create_playlist.click&dirid=16"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="830977104" data-dirid="16"> <img
+									src="./我的音乐_files/300_albumpic_121151_0.jpg"
+									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
+									alt="xiami" class="playlist__pic"> <i
+									class="mod_cover__icon_play js_play"
+									data-stat="y_new.profile.create_playlist.play"></i> </a>
+
+							</div>
+							<h4 class="playlist__title">
+								<span class="playlist__title_txt"> <a
+									href="http://y.qq.com/portal/playlist/830977104.html#stat=y_new.profile.create_playlist.click&dirid=16"
+									class="js_playlist"
+									data-stat="y_new.profile.create_playlist.click"
+									data-disstid="830977104" data-dirid="16" title="xiami">xiami</a>
+
+								</span>
+							</h4>
+							<div class="playlist__number">768首</div>
+							<div class="playlist__author">
+								<a title=" Vèrve."> Vèrve.</a>
+							</div>
+							<div class="playlist__other">54</div>
+
+							<a href="javascript:;" class="btn_operate_menu js_playlist_more"
+								data-type="3" data-id="830977104" data-dirid="16"
+								data-stat="y_new.profile.create_playlist.pic_mod_more"
+								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
+							</a>
+
+						</div></li>
 
 					<li class="playlist__item" data-disstid="830772580" data-dirid="12"
 						data-uin="529497710"
@@ -912,7 +1495,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="830772580" data-dirid="12"> <img
-									src="images/300_albumpic_8218_0.jpg"
+									src="./我的音乐_files/300_albumpic_8218_0.jpg"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="on the road" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -939,8 +1522,7 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 					<li class="playlist__item" data-disstid="815646322" data-dirid="11"
 						data-uin="529497710"
@@ -954,7 +1536,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="815646322" data-dirid="11"> <img
-									src="images/300_albumpic_139996_0.jpg"
+									src="./我的音乐_files/300_albumpic_139996_0.jpg"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="Echobelly" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -982,8 +1564,7 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 					<li class="playlist__item" data-disstid="806144818" data-dirid="10"
 						data-uin="529497710"
@@ -997,7 +1578,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="806144818" data-dirid="10"> <img
-									src="images/300_albumpic_1014525_0.jpg"
+									src="./我的音乐_files/300_albumpic_1014525_0.jpg"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="虾米歌单2016216191521" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -1024,8 +1605,7 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 					<li class="playlist__item" data-disstid="806135574" data-dirid="9"
 						data-uin="529497710"
@@ -1039,7 +1619,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="806135574" data-dirid="9"> <img
-									src="images/300_albumpic_444232_0.jpg"
+									src="./我的音乐_files/300_albumpic_444232_0.jpg"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="虾米歌单2016216181155" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -1066,8 +1646,7 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 					<li class="playlist__item" data-disstid="790685762" data-dirid="1"
 						data-uin="529497710"
@@ -1081,7 +1660,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="790685762" data-dirid="1"> <img
-									src="images/cover_playlist.png"
+									src="./我的音乐_files/cover_playlist.png"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="我最爱听" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -1107,8 +1686,7 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 					<li class="playlist__item" data-disstid="790685760" data-dirid="6"
 						data-uin="529497710"
@@ -1122,7 +1700,7 @@ $('#fans_tab').click(function(){
 									class="js_playlist"
 									data-stat="y_new.profile.create_playlist.click"
 									data-disstid="790685760" data-dirid="6"> <img
-									src="images/300_albumpic_17720_0.jpg"
+									src="./我的音乐_files/300_albumpic_17720_0.jpg"
 									onerror="this.src=&#39;//y.gtimg.cn/mediastyle/global/img/cover_playlist.png?max_age=31536000&#39;;this.onerror=null;"
 									alt="favor" class="playlist__pic"> <i
 									class="mod_cover__icon_play js_play"
@@ -1150,12 +1728,11 @@ $('#fans_tab').click(function(){
 								data-delete="delcreate_gedan"><span class="icon_txt">更多</span>
 							</a>
 
-						</div>
-					</li>
+						</div></li>
 
 				</ul>
 			</div>
-		
+		</div>
 		<!-- 关注 -->
 		<div class="js_box" id="focus_box" style="display:none;">
 			<div class="mod_tab" role="nav">
@@ -1184,21 +1761,26 @@ $('#fans_tab').click(function(){
 						<li class="footer_download_list__item"><a
 							href="http://y.qq.com/download/" class="js_footer_down"
 							data-type="pc" data-stat="y_new.footer.download.pc"><i
-								class="icon_qm_pc"><span class="icon_txt">QQ音乐</span> </i>PC版</a></li>
+								class="icon_qm_pc"><span class="icon_txt">QQ音乐</span>
+							</i>PC版</a>
+						</li>
 						<li class="footer_download_list__item"><a
 							href="http://y.qq.com/download/" class="js_footer_down"
 							data-type="mac" data-stat="y_new.footer.download.mac"><i
-								class="icon_qm_mac"><span class="icon_txt">QQ音乐</span> </i>Mac版</a>
+								class="icon_qm_mac"><span class="icon_txt">QQ音乐</span>
+							</i>Mac版</a>
 						</li>
 						<li class="footer_download_list__item"><a
 							href="http://y.qq.com/download/" class="js_footer_down"
 							data-type="andriod" data-stat="y_new.footer.download.andriod"><i
-								class="icon_qm_android"><span class="icon_txt">QQ音乐</span> </i>Android版</a>
+								class="icon_qm_android"><span class="icon_txt">QQ音乐</span>
+							</i>Android版</a>
 						</li>
 						<li class="footer_download_list__item"><a
 							href="http://y.qq.com/download/" class="js_footer_down"
 							data-type="iphone" data-stat="y_new.footer.download.iphone"><i
-								class="icon_qm_iphone"><span class="icon_txt">QQ音乐</span> </i>iPhone版</a>
+								class="icon_qm_iphone"><span class="icon_txt">QQ音乐</span>
+							</i>iPhone版</a>
 						</li>
 					</ul>
 				</div>
@@ -1217,25 +1799,30 @@ $('#fans_tab').click(function(){
 							href="http://y.qq.com/vip/voice_intro/index.html" target="_blank"
 							class="js_other_link"
 							data-stat="y_new.footer.other_music.supersound"><i
-								class="icon_qm_ss"></i>Super Sound</a></li>
+								class="icon_qm_ss"></i>Super Sound</a>
+						</li>
 						<li
 							class="footer_product_list__item footer_product_list__item--pic"><a
 							href="http://y.qq.com/y/static/down/qplay.html?pgv_ref=qqmusic.y.topmenu"
 							target="_blank" class="js_other_link"
 							data-stat="y_new.footer.other_music.qplay"><i
-								class="icon_qm_qp"></i>QPlay</a></li>
+								class="icon_qm_qp"></i>QPlay</a>
+						</li>
 						<li class="footer_product_list__item"><a
 							href="http://y.qq.com/cp/homepage.html#/home?from=yqq"
 							target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_music.cp">QQ音乐原创音乐平台</a></li>
+							data-stat="y_new.footer.other_music.cp">QQ音乐原创音乐平台</a>
+						</li>
 						<li class="footer_product_list__item"><a
 							href="http://y.qq.com/y/static/down/car_introduce.html"
 							target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_music.car_play">车载互联</a></li>
+							data-stat="y_new.footer.other_music.car_play">车载互联</a>
+						</li>
 						<li class="footer_product_list__item"><a
 							href="http://y.qq.com/yanchu/?pgv_ref=qqmusic.y.topmenu"
 							target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_music.yanchu">QQ演出</a></li>
+							data-stat="y_new.footer.other_music.yanchu">QQ演出</a>
+						</li>
 					</ul>
 				</div>
 
@@ -1245,13 +1832,16 @@ $('#fans_tab').click(function(){
 					<ul class="footer_link_list">
 						<li class="footer_link_list__item"><a href="http://v.qq.com/"
 							target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">腾讯视频</a></li>
+							data-stat="y_new.footer.other_link">腾讯视频</a>
+						</li>
 						<li class="footer_link_list__item"><a
 							href="http://z.qzone.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">手机QQ空间</a></li>
+							data-stat="y_new.footer.other_link">手机QQ空间</a>
+						</li>
 						<li class="footer_link_list__item"><a
 							href="http://im.qq.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">最新版QQ</a></li>
+							data-stat="y_new.footer.other_link">最新版QQ</a>
+						</li>
 						<li class="footer_link_list__item"><a
 							href="http://e.qq.com/index.shtml" target="_blank"
 							class="js_other_link" data-stat="y_new.footer.other_link">腾讯社交广告</a>
@@ -1274,23 +1864,27 @@ $('#fans_tab').click(function(){
 						</li>
 						<li class="footer_link_list__item"><a
 							href="http://xing.qq.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">星钻</a></li>
+							data-stat="y_new.footer.other_link">星钻</a>
+						</li>
 						<li class="footer_link_list__item"><a
 							href="http://www.weiyun.com/" target="_blank"
 							class="js_other_link" data-stat="y_new.footer.other_link">腾讯微云</a>
 						</li>
 						<li class="footer_link_list__item"><a
 							href="http://fm.qq.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">企鹅FM</a></li>
+							data-stat="y_new.footer.other_link">企鹅FM</a>
+						</li>
 						<li class="footer_link_list__item js_last" style="display:none;"><a
 							href="https://www.qcloud.com/" target="_blank"
 							class="js_other_link" data-stat="y_new.footer.other_link">腾讯云</a>
 						</li>
 						<li class="footer_link_list__item"><a href="javascript:;"
-							class="js_footer_more">更多</a></li>
+							class="js_footer_more">更多</a>
+						</li>
 						<li class="footer_link_list__item footer_link_list__item--more"><a
 							href="http://buluo.qq.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">兴趣部落</a></li>
+							data-stat="y_new.footer.other_link">兴趣部落</a>
+						</li>
 						<li class="footer_link_list__item footer_link_list__item--more"><a
 							href="https://ke.qq.com/?from=100" target="_blank"
 							class="js_other_link" data-stat="y_new.footer.other_link">腾讯课堂</a>
@@ -1305,7 +1899,8 @@ $('#fans_tab').click(function(){
 						</li>
 						<li class="footer_link_list__item footer_link_list__item--more"><a
 							href="http://www.znds.com/" target="_blank" class="js_other_link"
-							data-stat="y_new.footer.other_link">智能电视网</a></li>
+							data-stat="y_new.footer.other_link">智能电视网</a>
+						</li>
 						<li class="footer_link_list__item footer_link_list__item--more"><a
 							href="http://www.dangbei.com/" target="_blank"
 							class="js_other_link" data-stat="y_new.footer.other_link">当贝市场</a>
@@ -1350,7 +1945,18 @@ $('#fans_tab').click(function(){
 			</div>
 		</div>
 	</div>
-
+<!-- ↓↓暂时不知道这是什么鬼 一去掉就报错↓↓ -->
+	<script>SPD.mark(32); // HTML加载完毕</script>
+	<script type="text/javascript"> 
+	window.onload = function () {
+		SPD.mark(35);	// onload
+	};
+;(function () {
+	require.async("js/v4/profile.js", function( profile ){
+		profile.init();
+	});
+})(); 
+</script>
 
 
 
