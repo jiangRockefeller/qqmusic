@@ -49,11 +49,12 @@
     <servlet-name>AlbumServlet</servlet-name>
     <url-pattern>/album</url-pattern>
   </servlet-mapping>
+	
   <servlet-mapping>
-	  
     <servlet-name>ToplistServlet</servlet-name>
     <url-pattern>/toplist</url-pattern>
   </servlet-mapping>	
+	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
