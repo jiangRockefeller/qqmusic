@@ -26,12 +26,13 @@ public class AlbumServlet extends HttpServlet {
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
 	 */
-
-	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		
 		PrintWriter out = response.getWriter();
+		
+	
 		
 		RecordService recordService=new RecordService();
 		List<Record> mod_playlist=new ArrayList<Record>();
@@ -41,10 +42,10 @@ public class AlbumServlet extends HttpServlet {
 			System.out.println(record.getRname()+" "+record.getRdate());
 		}
 		request.getSession().setAttribute("all", mod_playlist);
-		//为什么用请求重定向,不是不会保存吗
-		response.sendRedirect("../qqmusic/album.jsp");
-		out.flush();
-		out.close();
+		//弄了struts不用在servlet跳转,
+		//response.sendRedirect("../qqmusic/album.jsp");
+		//out.flush();
+		//out.close();
 	}
 
 	/**
