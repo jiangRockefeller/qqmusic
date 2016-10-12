@@ -37,6 +37,18 @@
     <url-pattern>/album.servlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
+	  
+ <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToplistServlet</servlet-name>
+    <servlet-class>com.bdqn.qqmusic.servlet.ToplistServlet</servlet-class>
+  </servlet>
+
+ <servlet-mapping>
+    <servlet-name>ToplistServlet</servlet-name>
+    <url-pattern>/toplist</url-pattern>
+  </servlet-mapping>		  
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <filter>
