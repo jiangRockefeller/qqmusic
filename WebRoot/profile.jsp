@@ -31,6 +31,7 @@
 </script>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
+/* 控制添加菜单弹出 */
 	var clickEvent;
 	function show(){
 		$('.mod_operate_menu').css('display','block');
@@ -443,21 +444,47 @@ if(window.ActiveXObject || window.msIsStaticHTML){
 		<div class="mod_tab profile_nav" role="nav" id="nav">
 			<a 
 				class="mod_tab__item " href="javascript:;"
-				id="like_tab" data-tab="like" data-stat="y_new.profile.tab.like">我喜欢</a>
+				id="like_tab" data-tab="like" data-stat="y_new.profile.tab.like">我喜欢
+			</a>
+			<!-- ---------------------------------------------------------------- -->
 			<a 
 				class="mod_tab__item mod_tab__current" href="javascript:;" id="buy_tab"
 				data-tab="buy" data-stat="y_new.profile.tab.digital_album"
-				style="display: none;">我的数字专辑</a> <a class="mod_tab__item"
+				style="display: none;">我的数字专辑</a>
+			
+			<a class="mod_tab__item"
 				href="javascript:;" id="create_tab" data-tab="create"
-				data-stat="y_new.profile.tab.create_playlist">我创建的歌单</a> 
+				data-stat="y_new.profile.tab.create_playlist">我创建的歌单
+			</a> 
+			<!-- ---------------------------------------------------------------- -->
 			<a
 				class="mod_tab__item" href="javascript:;" id="focus_tab"
-				data-tab="focus" data-stat="y_new.profile.tab.focus">关注</a> 
+				data-tab="focus" data-stat="y_new.profile.tab.focus">关注
+			</a> 
+			<!-- ---------------------------------------------------------------- -->
 			<a
 				class="mod_tab__item" href="javascript:;" id="fans_tab"
-				data-tab="fans" data-stat="y_new.profile.tab.fans">粉丝</a>
+				data-tab="fans" data-stat="y_new.profile.tab.fans">粉丝
+			</a>
 		</div>
+<script type="text/javascript">
+/* 控制页面box切换 */
+$('#like_tab').click(function(){
+	console.log('like_tab');
+});
 
+$('#create_tab').click(function(){
+	console.log('create_tab');
+});
+
+$('#focus_tab').click(function(){
+	console.log('focus_tab');
+});
+
+$('#fans_tab').click(function(){
+	console.log('fans_tab');
+});
+</script>
 		<div class="js_box" id="like_box" style="display: block;">
 			<div class="mod_tab" role="nav">
 				<a class="mod_tab__item mod_tab__current" href="javascript:;"
