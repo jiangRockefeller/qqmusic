@@ -17,12 +17,7 @@ public class Test {
 		
 		
 		
-		SongService song = new SongService();
-		List<Song> list = new ArrayList<Song>();
-		list = song.getAllSongs();
-		System.out.println(song);
-		for(int i=0;i<list.size();i++ )
-		System.out.println(list.get(i).getSname() + " \tArtist： " + list.get(i).getArtist().getAname());
+		
 		
 		
 		
