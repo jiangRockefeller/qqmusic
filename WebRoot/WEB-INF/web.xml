@@ -25,6 +25,13 @@
     <servlet-name>AlbumServlet</servlet-name>
     <servlet-class>com.bdqn.qqmusic.servlet.AlbumServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AlbumCo</servlet-name>
+    <servlet-class>com.bdqn.qqmusic.servlet.AlbumCo</servlet-class>
+  </servlet>
+
 
  	<servlet>  
     	<servlet-name>SingerListServlet</servlet-name>
@@ -32,8 +39,10 @@
   	</servlet>
 	<servlet-mapping>
 		<servlet-name>SingerListServlet</servlet-name>
-		<url-pattern>/singerlist</url-pattern>
-	</servlet-mapping> 
+
+		<url-pattern>/singerlist.servlet</url-pattern>
+	</servlet-mapping>
+
 
 <!-- 	<filter-mapping>
 		<filter-name>CharaterEncodingFilter</filter-name>
@@ -41,6 +50,7 @@
 	</filter-mapping> -->
   <servlet-mapping>
     <servlet-name>AlbumServlet</servlet-name>
+
     <url-pattern>/album.servlet</url-pattern>
   </servlet-mapping>	
 
@@ -57,6 +67,11 @@
     <url-pattern>/toplist.servlet</url-pattern>
   </servlet-mapping>	
 
+  <servlet-mapping>
+    <servlet-name>AlbumCo</servlet-name>
+    <url-pattern>/albumCo.servlet</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

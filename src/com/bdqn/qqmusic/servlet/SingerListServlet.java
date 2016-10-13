@@ -20,7 +20,7 @@ public class SingerListServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();	
 		ArtistService artist=new ArtistService();
-		List<Artist> listArtist=artist.getAllArtists();
+		List<Artist> listArtist=artist.getAllArtists();		
 		
 		System.out.println(listArtist.get(0).getAname());
 		request.getSession().setAttribute("listArtist", listArtist);
