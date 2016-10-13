@@ -23,7 +23,7 @@ public class SongListManageService implements ISongListManageSevice {
 	//展示favor歌单曲目列表
 	
 	@Override
-	public List<SongList> showFavList(User user, int page) {
+	public List<SongListManageService> showFavList(User user, int page) {
 		// TODO Auto-generated method stub
 		//new歌单管理dao
 		SongListManageDAO getfavList = new SongListManageDAO();
@@ -37,15 +37,21 @@ public class SongListManageService implements ISongListManageSevice {
 		List<SongList> raw = new ArrayList<SongList>();
 		//获取分页歌单
 		raw = songListDAO.getSongListByGeDan(FavGeDan, page);
+		//new 结果集合
+		List<SongListManageService> result=new ArrayList<SongListManageService>();
 		//装入service层
-		for (SongList songList : raw) {
+		for (int i=1;i<raw.size();i++) {
+			//遍历元素
+			SongList songList=raw.get(i);
 			//服务层实例
 			SongListManageService instance=new SongListManageService();
 			instance.setSongName(songList.getSong().getSname());
 			instance.setArtistName(songList.getSong().getArtist().getAname());
 			instance.setRecordName(songList.getSong().getRecord().getRname());
+			instance.setDuration(songList.getSong().getSduration());
+			result.add(i, instance);
 		}
-		return null;
+		return result;
 	}
 	
 	

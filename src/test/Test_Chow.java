@@ -3,8 +3,6 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bdqn.qqmusic.pojo.Record;
-import com.bdqn.qqmusic.pojo.RecordDAO;
 import com.bdqn.qqmusic.pojo.Song;
 import com.bdqn.qqmusic.pojo.SongDAO;
 import com.bdqn.qqmusic.pojo.SongList;

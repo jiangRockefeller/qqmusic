@@ -7,5 +7,5 @@ import com.bdqn.qqmusic.pojo.User;
 
 public interface ISongListManageSevice {
 	//分页显示favor歌单曲目
-	public List<SongList> showFavList(User user,int page);
+	public List<SongListManageService> showFavList(User user,int page);
 }
