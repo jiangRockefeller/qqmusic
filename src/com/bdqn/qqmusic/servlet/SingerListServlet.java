@@ -27,7 +27,8 @@ public class SingerListServlet extends HttpServlet{
 		response.sendRedirect("singerlist.jsp");
 		out.flush();
 		out.close();
-		
+		//testArtist.jsp
+		//singerlist.jspC:\Users\Administrator\git\qqmusic\WebRoot\images\陈奕迅.png
 	}
 	
 }
