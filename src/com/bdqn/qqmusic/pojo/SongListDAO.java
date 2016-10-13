@@ -33,7 +33,7 @@ public class SongListDAO extends BaseDAO {
 	 * 
 	 */
 	
-	//获取歌单歌曲列表
+	//获取歌单歌曲列表,一页20首,页码page
 	public List<SongList> getSongListByGeDan(SongListManage songListManage,int page) {
 		String HQL="from SongList songList " +
 				"where songList.songListManage.smid=:smid " +

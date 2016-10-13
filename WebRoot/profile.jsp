@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -585,6 +586,7 @@
 									<div class="songlist__edit songlist__edit--check">
 										<input type="checkbox" class="songlist__checkbox">
 									</div>
+									<!-- 歌曲名字 -->
 									<div class="songlist__songname">
 										<span class="songlist__songname_txt"><a
 											href="http://y.qq.com/portal/song/002QyILG4ROqHS.html"
@@ -610,17 +612,19 @@
 												<span class="icon_txt">分享</span> </a>
 										</div>
 									</div>
+									<!-- 艺人名字 -->
 									<div class="songlist__artist">
-
-
 										<a href="http://y.qq.com/portal/singer/000GDFdW1he8eS.html"
 											data-singermid="000GDFdW1he8eS" data-singerid="182742"
-											title="Lemaitre" class="singer_name">Lemaitre</a> / <a
+											title="Lemaitre" class="singer_name">Lemaitre</a>
+											
+											<!-- 有多个歌手时,用  "/" 分隔 这里暂不实现 -->
+										<a
 											href="http://y.qq.com/portal/singer/001P2ODl3YGyip.html"
 											data-singermid="001P2ODl3YGyip" data-singerid="999775"
 											title="Jennie A." class="singer_name">Jennie A.</a>
-
 									</div>
+									<!-- 专辑名字 -->
 									<div class="songlist__album">
 										<a data-albummid="0017Wxwf08P1KF" data-albumid="1032937"
 											href="http://y.qq.com/portal/album/0017Wxwf08P1KF.html"

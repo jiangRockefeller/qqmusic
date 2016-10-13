@@ -3,6 +3,8 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bdqn.qqmusic.pojo.Record;
+import com.bdqn.qqmusic.pojo.RecordDAO;
 import com.bdqn.qqmusic.pojo.Song;
 import com.bdqn.qqmusic.pojo.SongDAO;
 import com.bdqn.qqmusic.pojo.SongList;
@@ -21,10 +23,15 @@ public class Test_Chow {
 		List<SongList> list = new ArrayList<SongList>();
 		list = sl.getSongListByGeDan(FavGeDan, 1);
 		SongDAO songDAO=new SongDAO();
+		
 		for (SongList songList : list) {
-			Song song=songDAO.findById(songList.getSlid());
-			System.out.println(songList.getSlcreateDate() + "  "
-					+ song.getSname());
+			Song song=songDAO.findById(songList.getSong().getSid());
+			
+			System.out.println(
+					  song.getSname() + " "
+					+ song.getArtist().getAname() + " "
+					+ song.getRecord().getRname()+ " "
+					+ song.getSduration());
 		}
 	}
 }
