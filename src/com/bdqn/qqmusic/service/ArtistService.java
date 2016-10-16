@@ -50,18 +50,18 @@ public class ArtistService implements IArtistService {
 			return artist;
 		}
 		//3	pageNum当前所在页；line一页有多少行artist
-		public List<Artist> getArtistsByNationPageUnm(Nation Nation, int pageNum,				//nufinish
+		public List<Artist> getArtistsByNationPageUnm(Nation nation, int pageNum,				//nufinish
 				int line) {
 			// TODO Auto-generated method stub
 			Session session=HibernateSessionFactory.getSession();
 			Query q=session.createQuery("from Artist a where a.nation.nid=:nid");
 			//从第几条开始
-			//limit 5,5 第二页的内容，显示5条
-			q.setFirstResult((pageNum-1)*5);
+			//limit 2,5 第二页的内容，显示5条
+			q.setFirstResult((pageNum-1)*line);
 			//显示多少条
 			q.setMaxResults(line);
-			q.setProperties(Nation);	
-			List list=q.list();
+			q.setProperties(nation);	
+			List<Artist> list=q.list();
 			return list;
 		}
 		//4	用Nation获取Artist

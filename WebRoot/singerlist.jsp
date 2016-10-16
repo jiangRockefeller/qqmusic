@@ -160,9 +160,12 @@ if(window.ActiveXObject || window.msIsStaticHTML){
         <div class="mod_singer_tag">
             <div class="singer_tag__list js_area">
 	    
+	    		
                 <a href="javascript:;" class="singer_tag__item singer_tag__item--all singer_tag__item--select" data-key="all_all" hidefocus>全部</a>
-                <a href="javascript:;" class="singer_tag__item" data-key="cn_man" hidefocus>华语男</a>
-                <a href="javascript:;" class="singer_tag__item" data-key="cn_woman" hidefocus>华语女</a>
+                <c:forEach items="${nationList}" var="nationList"  >
+                <a href="javascript:;" class="singer_tag__item" data-key="cn_man" hidefocus>${nationList.getNclass() }</a>
+                </c:forEach>
+<!--                 <a href="javascript:;" class="singer_tag__item" data-key="cn_woman" hidefocus>华语女</a>
                 <a href="javascript:;" class="singer_tag__item" data-key="cn_team" hidefocus>华语组合</a>
                 <a href="javascript:;" class="singer_tag__item" data-key="k_man" hidefocus>韩国男</a>
                 <a href="javascript:;" class="singer_tag__item" data-key="k_woman" hidefocus>韩国女</a>
@@ -177,7 +180,7 @@ if(window.ActiveXObject || window.msIsStaticHTML){
 		<a href="javascript:;" class="singer_tag__item" data-key="c_performer" hidefocus>演奏家</a>
 		<a href="javascript:;" class="singer_tag__item" data-key="c_composer" hidefocus>作曲家</a>
 		<a href="javascript:;" class="singer_tag__item" data-key="c_cantor" hidefocus>指挥家</a>
-                <a href="javascript:;" class="singer_tag__item" data-key="other_other" hidefocus>其他</a>
+                <a href="javascript:;" class="singer_tag__item" data-key="other_other" hidefocus>其他</a> -->
             </div>
             <div class="singer_tag__list js_letter">
                 <a href="javascript:;" class="singer_tag__item singer_tag__item--all singer_tag__item--select" data-key="all" hidefocus>热门</a>
@@ -216,17 +219,17 @@ if(window.ActiveXObject || window.msIsStaticHTML){
             <ul class="singer_list__list">
                 
                  <!-- src="../../y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg-max_age=2592000.jpg" tppabs="http://y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg?max_age=2592000" alt="薛之谦"> -->
-                 <c:forEach items="${listArtist}" var="listArtist"  >   <!-- end="9"  -->   
+                 <c:forEach items="${listartist}" var="listartist" >   <!-- end="9"  -->   
                 
                 <li class="singer_list__item">
                     <div class="singer_list__item_box">
-                        <a href="javascript:if(confirm('http://y.qq.com/portal/singer/002J4UUk29y8BY.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ���������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singerpic'" tppabs="http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singerpic" class="singer_list__cover js_singer" hidefocus="true" data-singermid="002J4UUk29y8BY" data-singerid="5062" title="薛之谦">
+                        <a href="javascript:if(confirm('http://y.qq.com/portal/singer/002J4UUk29y8BY.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ���������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singerpic'" tppabs="http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singerpic" class="singer_list__cover js_singer" hidefocus="true" data-singermid="002J4UUk29y8BY" data-singerid="5062" title="${listartist.getAname()}">
                             <img class="singer_list__pic" onerror="this.src='//y.gtimg.cn/mediastyle/global/img/singer_300.png?max_age=31536000'" 
-                            src="./images/Artist/${listArtist.getAname() }.png" tppabs="http://y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg?max_age=2592000" alt="薛之谦">
+                            src="./images/Artist/${listartist.getApicpath() }.png" tppabs="http://y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg?max_age=2592000" alt="${listartist.getAname()}">
                         </a>
-                        <h3 class="singer_list__title"><a href="javascript:if(confirm('http://y.qq.com/portal/singer/002J4UUk29y8BY.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ���������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singername'" tppabs="http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singername" data-singermid="002J4UUk29y8BY" data-id="5062" class="js_singer" title="薛之谦">         
+                        <h3 class="singer_list__title"><a href="javascript:if(confirm('http://y.qq.com/portal/singer/002J4UUk29y8BY.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ���������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singername'" tppabs="http://y.qq.com/portal/singer/002J4UUk29y8BY.html#stat=y_new.singerlist.singername" data-singermid="002J4UUk29y8BY" data-id="5062" class="js_singer" title="${listartist.getAname()}">         
                             <%-- ${sessionScope.listArtist.get(0).getAname()} --%>                           
-                            <b>${listArtist.getAname()}</b>                            
+                            <b>${listartist.getAname()}</b>                            
                             </a></h3>
                     </div>
                 </li>
@@ -505,7 +508,31 @@ if(window.ActiveXObject || window.msIsStaticHTML){
             <li class="singer_list_txt__item"><a href="javascript:if(confirm('http://y.qq.com/portal/singer/004EyqQS2hMS6V.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ���������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://y.qq.com/portal/singer/004EyqQS2hMS6V.html#stat=y_new.singerlist.singername'" tppabs="http://y.qq.com/portal/singer/004EyqQS2hMS6V.html#stat=y_new.singerlist.singername" class="singer_list_txt__link js_singer" data-singermid="004EyqQS2hMS6V" data-singerid="22926" title="陈翔">陈翔</a></li>
                         
         </ul>
-        <div class="mod_page_nav js_pager"><a href="javascript:;" class="prev js_pageindex" data-index="1" title="上一页" hidefocus=""><span>&lt;</span></a><a href="javascript:;" class="js_pageindex" data-index="1" hidefocus="">1</a><strong class="current">2</strong><a href="javascript:;" class="js_pageindex" data-index="3" hidefocus="">3</a><a href="javascript:;" class="js_pageindex" data-index="4" hidefocus="">4</a><strong class="more">...</strong><a href="javascript:;" class="js_pageindex" data-index="5016" hidefocus="">5016</a><a href="javascript:;" class="next js_pageindex" data-index="3" title="下一页" hidefocus=""><span>&gt;</span></a></div></div>
+        
+        <div class="mod_page_nav js_pager">
+        <a href="singerlist.serlet?aid=${session.pageNum-1 };" class="prev js_pageindex" data-index="1" title="上一页" hidefocus="">
+        <span>&lt;</span>
+        </a><%-- ${session.listArtlist.get(0).getAname() } --%>
+        <strong class="current">${session.pageNum }</strong>
+        <a href="singerlist.serlet?aid=${session.pageNum+1 };" class="js_pageindex" data-index="2" hidefocus="">${session.pageNum+1 }
+        ${listartist.get(9).getAname()}
+        </a>
+        <a href="singerlist.serlet?aid=${session.pageNum+2 };" class="js_pageindex" data-index="3" hidefocus="">${session.pageNum+2 }</a>
+        <a href="singerlist.serlet?aid=${session.pageNum+3 };" class="js_pageindex" data-index="4" hidefocus="">${session.pageNum+3 }</a>
+        <a href="singerlist.serlet?aid=${session.pageNum+4 };" class="js_pageindex" data-index="4" hidefocus="">下一页</a>
+
+        <a href="javascript:;" class="next js_pageindex" data-index="3" title="下一页" hidefocus=""></a></div></div>
+        
+        <!-- <div class="mod_page_nav js_pager">
+        <a href="javascript:;" class="prev js_pageindex" data-index="1" title="上一页" hidefocus="">
+        <span>&lt;</span>
+        </a><a href="javascript:;" class="js_pageindex" data-index="1" hidefocus="">1</a>
+        <strong class="current">2</strong>
+        <a href="javascript:;" class="js_pageindex" data-index="3" hidefocus="">3</a>
+        <a href="javascript:;" class="js_pageindex" data-index="4" hidefocus="">4</a>
+        <strong class="more">...</strong>
+        <a href="javascript:;" class="js_pageindex" data-index="5016" hidefocus="">5016</a>
+        <a href="javascript:;" class="next js_pageindex" data-index="3" title="下一页" hidefocus=""><span>&gt;</span></a></div></div> -->
 		
 	</div> 
     </div>
